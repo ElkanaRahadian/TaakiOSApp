@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		61E64220261B625800876AB4 /* TaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E6421F261B625800876AB4 /* TaskView.storyboard */; };
 		61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E64223261B6C1700876AB4 /* TaskViewController.swift */; };
+		9C41E6C0261C350A0090EB56 /* summaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C41E6BF261C350A0090EB56 /* summaryView.storyboard */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
 		F7581173261AD07000B97E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581172261AD07000B97E04 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		61E6421F261B625800876AB4 /* TaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskView.storyboard; sourceTree = "<group>"; };
 		61E64223261B6C1700876AB4 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		9C41E6BF261C350A0090EB56 /* summaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = summaryView.storyboard; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7581170261AD07000B97E04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 			path = TaskView;
 			sourceTree = "<group>";
 		};
+		9C41E6BA261C34D50090EB56 /* SummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				9C41E6BF261C350A0090EB56 /* summaryView.storyboard */,
+			);
+			path = SummaryView;
+			sourceTree = "<group>";
+		};
 		F7581162261AD07000B97E04 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		F758116D261AD07000B97E04 /* TaakiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C41E6BA261C34D50090EB56 /* SummaryView */,
 				61E6421E261B624000876AB4 /* TaskView */,
 				F758116E261AD07000B97E04 /* AppDelegate.swift */,
 				F7581170261AD07000B97E04 /* SceneDelegate.swift */,
@@ -141,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C41E6C0261C350A0090EB56 /* summaryView.storyboard in Resources */,
 				61E64220261B625800876AB4 /* TaskView.storyboard in Resources */,
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
