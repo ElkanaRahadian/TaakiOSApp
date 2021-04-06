@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AC422D8261C79AC003C4436 /* FocusPageCongrats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC422D7261C79AC003C4436 /* FocusPageCongrats.storyboard */; };
+		4AC422DB261C79F8003C4436 /* FocusPageCongrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC422DA261C79F8003C4436 /* FocusPageCongrats.swift */; };
 		61E64220261B625800876AB4 /* TaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E6421F261B625800876AB4 /* TaskView.storyboard */; };
 		61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E64223261B6C1700876AB4 /* TaskViewController.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AC422D7261C79AC003C4436 /* FocusPageCongrats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusPageCongrats.storyboard; sourceTree = "<group>"; };
+		4AC422DA261C79F8003C4436 /* FocusPageCongrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusPageCongrats.swift; sourceTree = "<group>"; };
 		61E6421F261B625800876AB4 /* TaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskView.storyboard; sourceTree = "<group>"; };
 		61E64223261B6C1700876AB4 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AC422D6261C797A003C4436 /* FocusPageCongrats */ = {
+			isa = PBXGroup;
+			children = (
+				4AC422D7261C79AC003C4436 /* FocusPageCongrats.storyboard */,
+				4AC422DA261C79F8003C4436 /* FocusPageCongrats.swift */,
+			);
+			path = FocusPageCongrats;
+			sourceTree = "<group>";
+		};
 		61E6421E261B624000876AB4 /* TaskView */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		F758116D261AD07000B97E04 /* TaakiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AC422D6261C797A003C4436 /* FocusPageCongrats */,
 				61E6421E261B624000876AB4 /* TaskView */,
 				F758116E261AD07000B97E04 /* AppDelegate.swift */,
 				F7581170261AD07000B97E04 /* SceneDelegate.swift */,
@@ -143,6 +157,7 @@
 			files = (
 				61E64220261B625800876AB4 /* TaskView.storyboard in Resources */,
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
+				4AC422D8261C79AC003C4436 /* FocusPageCongrats.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
 				F7581176261AD07000B97E04 /* Main.storyboard in Resources */,
 			);
@@ -159,6 +174,7 @@
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
 				61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */,
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
+				4AC422DB261C79F8003C4436 /* FocusPageCongrats.swift in Sources */,
 				F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
