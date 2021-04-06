@@ -66,6 +66,16 @@
             </objects>
             <point key="canvasLocation" x="180" y="991"/>
         </scene>
+        <!--summaryView-->
+        <scene sceneID="Rgg-2T-KXM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="summaryView" id="tfv-UE-B3V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2CA-tP-wlM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uus-mw-NAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="990"/>
+        </scene>
         <!--Summary-->
         <scene sceneID="FRr-bi-0zc">
             <objects>
@@ -75,6 +85,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="tfv-UE-B3V" kind="relationship" relationship="rootViewController" id="bHB-cX-FOv"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne2-qV-moz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
