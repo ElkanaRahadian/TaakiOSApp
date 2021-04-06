@@ -70,7 +70,6 @@ class SummaryViewController: UIViewController, UICollectionViewDataSource, UICol
 }
 
 class badgesTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -94,5 +93,4 @@ class dailyGoalTableView : NSObject, UITableViewDataSource, UITableViewDelegate 
         let dailyGoalCell = tableView.dequeueReusableCell(withIdentifier: "dailyGoalIdentifier", for: indexPath) as? DailyGoalsCell
         return dailyGoalCell!
     }
-
 }
