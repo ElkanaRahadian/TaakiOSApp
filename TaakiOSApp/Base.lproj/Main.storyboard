@@ -81,7 +81,7 @@
             <objects>
                 <navigationController id="GLT-M0-G49" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Summary" image="chart.bar" catalog="system" id="TaZ-zw-w2J"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgs-1s-bZi">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="zgs-1s-bZi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
