@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		61E64220261B625800876AB4 /* TaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E6421F261B625800876AB4 /* TaskView.storyboard */; };
 		61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E64223261B6C1700876AB4 /* TaskViewController.swift */; };
+		D50EC2A7261C7492009C8C6A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50EC2A6261C7492009C8C6A /* Storyboard.storyboard */; };
+		D50EC2AA261C74B3009C8C6A /* taskViewAddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50EC2A9261C74B3009C8C6A /* taskViewAddTask.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
 		F7581173261AD07000B97E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581172261AD07000B97E04 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		61E6421F261B625800876AB4 /* TaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskView.storyboard; sourceTree = "<group>"; };
 		61E64223261B6C1700876AB4 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		D50EC2A6261C7492009C8C6A /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		D50EC2A9261C74B3009C8C6A /* taskViewAddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskViewAddTask.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7581170261AD07000B97E04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,15 @@
 			path = TaskView;
 			sourceTree = "<group>";
 		};
+		D50EC2A5261C7450009C8C6A /* taskViewAddTask */ = {
+			isa = PBXGroup;
+			children = (
+				D50EC2A6261C7492009C8C6A /* Storyboard.storyboard */,
+				D50EC2A9261C74B3009C8C6A /* taskViewAddTask.swift */,
+			);
+			path = taskViewAddTask;
+			sourceTree = "<group>";
+		};
 		F7581162261AD07000B97E04 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		F758116D261AD07000B97E04 /* TaakiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				D50EC2A5261C7450009C8C6A /* taskViewAddTask */,
 				61E6421E261B624000876AB4 /* TaskView */,
 				F758116E261AD07000B97E04 /* AppDelegate.swift */,
 				F7581170261AD07000B97E04 /* SceneDelegate.swift */,
@@ -145,6 +159,7 @@
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
 				F7581176261AD07000B97E04 /* Main.storyboard in Resources */,
+				D50EC2A7261C7492009C8C6A /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */,
+				D50EC2AA261C74B3009C8C6A /* taskViewAddTask.swift in Sources */,
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
 				61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */,
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
