@@ -10,6 +10,8 @@
 		61E64220261B625800876AB4 /* TaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E6421F261B625800876AB4 /* TaskView.storyboard */; };
 		61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E64223261B6C1700876AB4 /* TaskViewController.swift */; };
 		9C41E6C0261C350A0090EB56 /* summaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C41E6BF261C350A0090EB56 /* summaryView.storyboard */; };
+		9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */; };
+		9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
 		F7581173261AD07000B97E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581172261AD07000B97E04 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		61E6421F261B625800876AB4 /* TaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskView.storyboard; sourceTree = "<group>"; };
 		61E64223261B6C1700876AB4 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		9C41E6BF261C350A0090EB56 /* summaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = summaryView.storyboard; sourceTree = "<group>"; };
+		9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewCell.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7581170261AD07000B97E04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				9C41E6BF261C350A0090EB56 /* summaryView.storyboard */,
+				9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */,
+				9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */,
 			);
 			path = SummaryView;
 			sourceTree = "<group>";
@@ -167,11 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */,
 				F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */,
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
 				61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */,
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
 				F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */,
+				9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
