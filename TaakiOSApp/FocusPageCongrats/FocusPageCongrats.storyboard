@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Focus Page Congrats-->
         <scene sceneID="E9T-EZ-web">
             <objects>
-                <viewController id="ILJ-A0-HHI" sceneMemberID="viewController">
+                <viewController id="ILJ-A0-HHI" customClass="FocusPageCongrats" customModule="TaakiOSApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4mC-n5-QI2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,14 @@
                         <viewLayoutGuide key="safeArea" id="R6M-3c-cki"/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="congratsButton" destination="L3L-h2-ePm" id="TSk-Cl-EPZ"/>
+                        <outlet property="congratsDesc1" destination="x8W-u3-grl" id="8nb-nN-7wB"/>
+                        <outlet property="congratsDesk2" destination="hfC-cl-sYv" id="vAT-gA-dpj"/>
+                        <outlet property="congratsImage" destination="wTY-K4-kSE" id="PZT-xl-J3b"/>
+                        <outlet property="congratsPoints" destination="zR0-Od-F8s" id="Am9-bK-CQX"/>
+                        <outlet property="congratsTitle" destination="6ui-Zf-O5n" id="SjY-Ca-iuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zr-po-qId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
