@@ -18,6 +18,7 @@
 		F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7581177261AD07000B97E04 /* TaakiOSApp.xcdatamodeld */; };
 		F758117B261AD07000B97E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758117A261AD07000B97E04 /* Assets.xcassets */; };
 		F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758117C261AD07000B97E04 /* LaunchScreen.storyboard */; };
+		F77F38C5261D930400DA8D3B /* FocusView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77F38C4261D930400DA8D3B /* FocusView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F758117A261AD07000B97E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F758117D261AD07000B97E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F758117F261AD07000B97E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F77F38C4261D930400DA8D3B /* FocusView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F758116D261AD07000B97E04 /* TaakiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				F77F38C3261D92E700DA8D3B /* FocusView */,
 				61E6421E261B624000876AB4 /* TaskView */,
 				F758116E261AD07000B97E04 /* AppDelegate.swift */,
 				F7581170261AD07000B97E04 /* SceneDelegate.swift */,
@@ -88,6 +91,22 @@
 				F7581177261AD07000B97E04 /* TaakiOSApp.xcdatamodeld */,
 			);
 			path = TaakiOSApp;
+			sourceTree = "<group>";
+		};
+		F77F38C3261D92E700DA8D3B /* FocusView */ = {
+			isa = PBXGroup;
+			children = (
+				F77F38C7261D947D00DA8D3B /* FocusViewAssets */,
+				F77F38C4261D930400DA8D3B /* FocusView.storyboard */,
+			);
+			path = FocusView;
+			sourceTree = "<group>";
+		};
+		F77F38C7261D947D00DA8D3B /* FocusViewAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FocusViewAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +169,7 @@
 				61E64220261B625800876AB4 /* TaskView.storyboard in Resources */,
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
+				F77F38C5261D930400DA8D3B /* FocusView.storyboard in Resources */,
 				F7581176261AD07000B97E04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
