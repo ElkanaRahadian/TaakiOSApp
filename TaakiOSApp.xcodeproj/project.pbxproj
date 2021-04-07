@@ -198,6 +198,7 @@
 				9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */,
 				F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */,
 				61AA380F261D739F005F706B /* TaskModel.swift in Sources */,
+				9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
