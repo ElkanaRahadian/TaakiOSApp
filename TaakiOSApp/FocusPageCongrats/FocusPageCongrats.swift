@@ -5,4 +5,15 @@
 //  Created by Devina Ranlyca on 06/04/21.
 //
 
-import Foundation
+import UIKit
+
+class FocusPageCongrats: UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+    }
+}
+
