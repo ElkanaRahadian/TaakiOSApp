@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61AA380B261D6EE2005F706B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA380A261D6EE2005F706B /* TaskCell.swift */; };
+		61AA380F261D739F005F706B /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA380E261D739F005F706B /* TaskModel.swift */; };
 		61E64220261B625800876AB4 /* TaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E6421F261B625800876AB4 /* TaskView.storyboard */; };
 		61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E64223261B6C1700876AB4 /* TaskViewController.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61AA380A261D6EE2005F706B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		61AA380E261D739F005F706B /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		61E6421F261B625800876AB4 /* TaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskView.storyboard; sourceTree = "<group>"; };
 		61E64223261B6C1700876AB4 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +52,8 @@
 			children = (
 				61E6421F261B625800876AB4 /* TaskView.storyboard */,
 				61E64223261B6C1700876AB4 /* TaskViewController.swift */,
+				61AA380A261D6EE2005F706B /* TaskCell.swift */,
+				61AA380E261D739F005F706B /* TaskModel.swift */,
 			);
 			path = TaskView;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
 				61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */,
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
+				61AA380B261D6EE2005F706B /* TaskCell.swift in Sources */,
 				F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */,
+				61AA380F261D739F005F706B /* TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
