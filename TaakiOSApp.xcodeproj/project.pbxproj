@@ -71,10 +71,10 @@
 		9C41E6BA261C34D50090EB56 /* SummaryView */ = {
 			isa = PBXGroup;
 			children = (
-				9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */,
-				9C53ECA0261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift */,
 				9C41E6BF261C350A0090EB56 /* summaryView.storyboard */,
 				9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */,
+				9C53ECA0261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift */,
+				9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */,
 				9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */,
 			);
 			path = SummaryView;
