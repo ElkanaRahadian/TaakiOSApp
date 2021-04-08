@@ -40,7 +40,6 @@ class SummaryViewController: UIViewController {
         
         self.badgesTable.reloadData()
         self.dailyGoalTable.reloadData()
-        
     }
     
 //    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
