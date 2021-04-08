@@ -11,8 +11,8 @@ class DailyGoalsCell: UITableViewCell {
 
     
     @IBOutlet weak var setDailyGoalButton: UIButton!
+    @IBOutlet weak var dailyGoalDetail: UITextField!
     
-    @IBOutlet weak var dailyGoalLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
