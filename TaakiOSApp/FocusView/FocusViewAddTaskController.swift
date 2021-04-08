@@ -1,10 +1,9 @@
 import UIKit
 
-class FocusViewController: UIViewController {
-    
+class FocusViewAddTaskController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
+
 }
