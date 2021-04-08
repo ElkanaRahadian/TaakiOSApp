@@ -35,6 +35,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="f3B-vd-8Qp" kind="relationship" relationship="rootViewController" id="mc5-fx-spg"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZ3-c7-xHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +58,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGf-gJ-oVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="572"/>
+        </scene>
+        <!--FocusView-->
+        <scene sceneID="a1C-dj-D8I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FocusView" id="f3B-vd-8Qp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OIv-z8-EAK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAV-II-hWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="990"/>
         </scene>
         <!--TaskView-->
         <scene sceneID="Ahf-a7-j1i">
