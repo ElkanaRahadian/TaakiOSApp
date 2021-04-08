@@ -85,6 +85,7 @@
                         <color key="backgroundColor" red="0.94901960780000005" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="taskSearchBar" destination="FhF-pS-Znj" id="jha-jH-cW9"/>
                         <outlet property="taskTableView" destination="zp0-HW-m2T" id="q1j-Tn-cJf"/>
                     </connections>
                 </viewController>
