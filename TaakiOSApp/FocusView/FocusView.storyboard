@@ -82,7 +82,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="New Task" id="BGx-LW-zx3">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SI8-Vt-GxC"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SI8-Vt-GxC">
+                                            <connections>
+                                                <segue destination="hkn-cZ-iAN" kind="unwind" unwindAction="unwindtoFocusViewWith_sender:" id="Lxa-oM-xhS"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="mb0-gk-dcI">
                                             <connections>
                                                 <segue destination="r5Q-jG-mVO" kind="presentation" modalPresentationStyle="fullScreen" id="KkV-9U-YAW"/>
@@ -104,7 +108,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dal-Nx-Gxp">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dal-Nx-Gxp">
                                 <rect key="frame" x="16" y="215" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -116,6 +120,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgC-cs-XHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hkn-cZ-iAN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="941.53846153846155" y="190.521327014218"/>
         </scene>
