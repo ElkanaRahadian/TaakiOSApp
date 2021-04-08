@@ -14,7 +14,6 @@
 		9C41E6C0261C350A0090EB56 /* summaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C41E6BF261C350A0090EB56 /* summaryView.storyboard */; };
 		9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */; };
 		9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */; };
-		9C53ECA2261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53ECA0261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift */; };
 		9C53ECA3261CC7EC004D6D74 /* DailyGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
@@ -33,7 +32,6 @@
 		9C41E6BF261C350A0090EB56 /* summaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = summaryView.storyboard; sourceTree = "<group>"; };
 		9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewCell.swift; sourceTree = "<group>"; };
-		9C53ECA0261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyGoalsCell.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			children = (
 				9C41E6BF261C350A0090EB56 /* summaryView.storyboard */,
 				9C41E6EC261C627C0090EB56 /* SummaryViewController.swift */,
-				9C53ECA0261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift */,
 				9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */,
 				9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */,
 			);
@@ -188,7 +185,6 @@
 				9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */,
 				F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */,
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
-				9C53ECA2261CC7EC004D6D74 /* StatisticsCollectionViewCell.swift in Sources */,
 				61E64224261B6C1700876AB4 /* TaskViewController.swift in Sources */,
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
 				61AA380B261D6EE2005F706B /* TaskCell.swift in Sources */,
