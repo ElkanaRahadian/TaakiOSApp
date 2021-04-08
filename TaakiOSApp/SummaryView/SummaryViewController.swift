@@ -11,28 +11,27 @@ let badgesTitle = ["Taak Challenger", "Triplet Challenger", "Wild Fire", "Sage",
 let badgesDetail = ["First Task Completed", "3 Days Streak", "First Daily Goals Completed", "Gain 120 points", "Completed a task on Saturday and Sunday"]
 let progressDetail = ["0/1", "0/3", "0/1", "0/120", "0/2"]
 
-class SummaryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+let dailyGoalPicker = UIDatePicker()
+
+class SummaryViewController: UIViewController {
 
     @IBOutlet weak var badgesTable: UITableView!
     @IBOutlet weak var dailyGoalTable: UITableView!
     @IBOutlet weak var statisticsCollection: UICollectionView!
     
+    @IBOutlet weak var totalMinLabel: UILabel!
+    @IBOutlet weak var dailyStreakLabel: UILabel!
+    
     let badgesClass = badgesTableView()
     let dailyGoalClass = dailyGoalTableView()
-    
+//    let dailyGoalPickerClass = createDailyGoalPicker()
  
     
     var array = ["1130", "100"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        statisticsCollection.dataSource = self
-        statisticsCollection.delegate = self
-        
-//        badgesTable.delegate = self
-//        badgesTable.dataSource = self
-
+    
         self.badgesTable.dataSource = badgesClass
         self.dailyGoalTable.dataSource = dailyGoalClass
         
@@ -41,35 +40,7 @@ class SummaryViewController: UIViewController, UICollectionViewDataSource, UICol
         
         self.badgesTable.reloadData()
         self.dailyGoalTable.reloadData()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.array.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 0 {
-            guard let totalMinCell = collectionView.dequeueReusableCell(withReuseIdentifier: "totalMinCellIdentifier", for: indexPath) as? StatisticsCollectionViewCell
-            else {
-                fatalError("ERROR")
-            }
-            totalMinCell.totalMinLabel.text = "1130"
-            return totalMinCell
-        } else {
-            guard let dailyStreakCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dailyStreakCellIdentifier", for: indexPath) as? StatisticsCollectionViewCell
-            else {
-                fatalError("ERROR")
-            }
-            return dailyStreakCell
-        }
         
-   
-        
-//        statisticsCell?.statisticsImageTotalMin.image = UIImage(named: "Screen Shot 2021-04-06 at 21.19.54")
-//        statisticsCell?.totalMinLabel.text = self.array[indexPath.row]
-//        statisticsCell?.backgroundColor = UIColor.cyan
-//        statisticsCell?.layer.borderWidth = 155
-//        statisticsCell?.layer.cornerRadius = 8
     }
     
 //    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -157,6 +128,22 @@ class dailyGoalTableView : NSObject, UITableViewDataSource, UITableViewDelegate 
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let dailyGoalCell = tableView.dequeueReusableCell(withIdentifier: "dailyGoalIdentifier", for: indexPath) as? DailyGoalsCell
+        
+        func createDailyGoalPicker() {
+            //create toolbar
+            let toolbar = UIToolbar()
+            toolbar.sizeToFit()
+            
+            //bar button
+            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            toolbar.setItems([doneButton], animated: true)
+            //assign toolbar
+            dailyGoalCell?.dailyGoalDetail.inputAccessoryView = toolbar
+            
+            //assign picker to text field
+            dailyGoalCell?.dailyGoalDetail.inputView = dailyGoalPicker
+        }
+        
         return dailyGoalCell!
     }
 }
