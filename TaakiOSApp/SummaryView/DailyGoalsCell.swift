@@ -8,11 +8,6 @@
 import UIKit
 
 class DailyGoalsCell: UITableViewCell {
-
-    
-    @IBOutlet weak var setDailyGoalButton: UIButton!
-
-    @IBOutlet weak var dailyGoalDetail: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
