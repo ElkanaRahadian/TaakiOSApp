@@ -17,8 +17,6 @@
 		9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */; };
 		9C53ECA3261CC7EC004D6D74 /* DailyGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */; };
 		9C578E3E261F1EB200D7158E /* SummaryBaruViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C578E3D261F1EB200D7158E /* SummaryBaruViewController.swift */; };
-		F74F3481261DB945007C10F7 /* FocusView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74F3480261DB945007C10F7 /* FocusView.storyboard */; };
-		F74F3486261DC358007C10F7 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74F3485261DC358007C10F7 /* FocusViewController.swift */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
 		F7581173261AD07000B97E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581172261AD07000B97E04 /* ViewController.swift */; };
@@ -26,6 +24,9 @@
 		F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7581177261AD07000B97E04 /* TaakiOSApp.xcdatamodeld */; };
 		F758117B261AD07000B97E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758117A261AD07000B97E04 /* Assets.xcassets */; };
 		F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758117C261AD07000B97E04 /* LaunchScreen.storyboard */; };
+		F7803DFB2620ADE0003473FF /* FocusPageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7803DFA2620ADE0003473FF /* FocusPageView.storyboard */; };
+		F7803DFF2620B54D003473FF /* FocusAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7803DFE2620B54D003473FF /* FocusAddTaskViewController.swift */; };
+		F7803E0C2620E667003473FF /* FocusCountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7803E0B2620E667003473FF /* FocusCountdownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +40,6 @@
 		9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewCell.swift; sourceTree = "<group>"; };
 		9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyGoalsCell.swift; sourceTree = "<group>"; };
 		9C578E3D261F1EB200D7158E /* SummaryBaruViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBaruViewController.swift; sourceTree = "<group>"; };
-		F74F3480261DB945007C10F7 /* FocusView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusView.storyboard; sourceTree = "<group>"; };
-		F74F3485261DC358007C10F7 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7581170261AD07000B97E04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +49,9 @@
 		F758117A261AD07000B97E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F758117D261AD07000B97E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F758117F261AD07000B97E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7803DFA2620ADE0003473FF /* FocusPageView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusPageView.storyboard; sourceTree = "<group>"; };
+		F7803DFE2620B54D003473FF /* FocusAddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAddTaskViewController.swift; sourceTree = "<group>"; };
+		F7803E0B2620E667003473FF /* FocusCountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCountdownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,15 +89,6 @@
 			path = SummaryView;
 			sourceTree = "<group>";
 		};
-		F74F347F261DB877007C10F7 /* FocusView */ = {
-			isa = PBXGroup;
-			children = (
-				F74F3480261DB945007C10F7 /* FocusView.storyboard */,
-				F74F3485261DC358007C10F7 /* FocusViewController.swift */,
-			);
-			path = FocusView;
-			sourceTree = "<group>";
-		};
 		F7581162261AD07000B97E04 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +108,7 @@
 		F758116D261AD07000B97E04 /* TaakiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				F74F347F261DB877007C10F7 /* FocusView */,
+				F7803DF92620ADC2003473FF /* FocusPageView */,
 				9C41E6BA261C34D50090EB56 /* SummaryView */,
 				61E6421E261B624000876AB4 /* TaskView */,
 				F758116E261AD07000B97E04 /* AppDelegate.swift */,
@@ -128,6 +121,16 @@
 				F7581177261AD07000B97E04 /* TaakiOSApp.xcdatamodeld */,
 			);
 			path = TaakiOSApp;
+			sourceTree = "<group>";
+		};
+		F7803DF92620ADC2003473FF /* FocusPageView */ = {
+			isa = PBXGroup;
+			children = (
+				F7803DFA2620ADE0003473FF /* FocusPageView.storyboard */,
+				F7803DFE2620B54D003473FF /* FocusAddTaskViewController.swift */,
+				F7803E0B2620E667003473FF /* FocusCountdownViewController.swift */,
+			);
+			path = FocusPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +192,10 @@
 			files = (
 				9C41E6C0261C350A0090EB56 /* summaryView.storyboard in Resources */,
 				61E64220261B625800876AB4 /* TaskView.storyboard in Resources */,
-				F74F3481261DB945007C10F7 /* FocusView.storyboard in Resources */,
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
 				F7581176261AD07000B97E04 /* Main.storyboard in Resources */,
+				F7803DFB2620ADE0003473FF /* FocusPageView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */,
-				F74F3486261DC358007C10F7 /* FocusViewController.swift in Sources */,
 				F7581179261AD07000B97E04 /* TaakiOSApp.xcdatamodeld in Sources */,
+				F7803E0C2620E667003473FF /* FocusCountdownViewController.swift in Sources */,
 				9C10C97B262043CE00DC5273 /* RoundedView.swift in Sources */,
 				F7581173261AD07000B97E04 /* ViewController.swift in Sources */,
 				9C578E3E261F1EB200D7158E /* SummaryBaruViewController.swift in Sources */,
@@ -213,6 +216,7 @@
 				F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */,
 				61AA380B261D6EE2005F706B /* TaskCell.swift in Sources */,
 				9C53ECA3261CC7EC004D6D74 /* DailyGoalsCell.swift in Sources */,
+				F7803DFF2620B54D003473FF /* FocusAddTaskViewController.swift in Sources */,
 				F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */,
 				61AA380F261D739F005F706B /* TaskModel.swift in Sources */,
 				9C41E6ED261C627C0090EB56 /* SummaryViewController.swift in Sources */,
