@@ -167,6 +167,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-Q4-20N">
+                                <rect key="frame" x="46" y="344" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Irv-tf-ZTL"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.98431372549999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,6 +179,7 @@
                     <connections>
                         <outlet property="badgesTable" destination="KOw-F2-0YP" id="KUs-Cl-ffQ"/>
                         <outlet property="dailyStreakLabel" destination="rC9-4y-7mY" id="R11-jT-Zbi"/>
+                        <outlet property="setDailyGoalBtn" destination="6Q1-Q4-20N" id="hP6-ev-jyI"/>
                         <outlet property="totalMinLabel" destination="kmX-Fj-JpS" id="btc-B0-zF4"/>
                     </connections>
                 </viewController>

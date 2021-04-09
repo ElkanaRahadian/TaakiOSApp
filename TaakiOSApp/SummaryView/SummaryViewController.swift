@@ -20,6 +20,7 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var totalMinLabel: UILabel!
     @IBOutlet weak var dailyStreakLabel: UILabel!
     
+    @IBOutlet weak var setDailyGoalBtn: UIButton!
     let badgesClass = badgesTableView()
 //    let dailyGoalClass = dailyGoalTableView()
 //    let dailyGoalPickerClass = createDailyGoalPicker()
