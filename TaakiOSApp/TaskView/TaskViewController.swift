@@ -51,9 +51,9 @@ class TaskViewController: UIViewController {
     }
     
     func setUpInitialDataToCoreData() {
-//        if taskCollection.count == 0 {
-//            createData()
-//        }
+        if taskCollection.count == 0 {
+            createData()
+        }
         
         retrieveData()
         taskTableView.reloadData()
