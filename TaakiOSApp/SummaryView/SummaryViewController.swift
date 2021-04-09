@@ -16,14 +16,13 @@ let dailyGoalPicker = UIDatePicker()
 class SummaryViewController: UIViewController {
 
     @IBOutlet weak var badgesTable: UITableView!
-    @IBOutlet weak var dailyGoalTable: UITableView!
-    @IBOutlet weak var statisticsCollection: UICollectionView!
     
     @IBOutlet weak var totalMinLabel: UILabel!
     @IBOutlet weak var dailyStreakLabel: UILabel!
     
+    @IBOutlet weak var setDailyGoalBtn: UIButton!
     let badgesClass = badgesTableView()
-    let dailyGoalClass = dailyGoalTableView()
+//    let dailyGoalClass = dailyGoalTableView()
 //    let dailyGoalPickerClass = createDailyGoalPicker()
  
     
@@ -33,15 +32,30 @@ class SummaryViewController: UIViewController {
         super.viewDidLoad()
     
         self.badgesTable.dataSource = badgesClass
-        self.dailyGoalTable.dataSource = dailyGoalClass
+//        self.dailyGoalTable.dataSource = dailyGoalClass
         
         self.badgesTable.delegate = badgesClass
-        self.dailyGoalTable.delegate = dailyGoalClass
+//        self.dailyGoalTable.delegate = dailyGoalClass
         
         self.badgesTable.reloadData()
-        self.dailyGoalTable.reloadData()
+//        self.dailyGoalTable.reloadData()
         
     }
+    
+//    extension UIView {
+//        @IBInspectable var cornerRadius: CGFloat {
+//            get {
+//                return layer.cornerRadius
+//            } set {
+//                layer.cornerRadius = 5
+//                layer.masksToBounds = true
+//            }
+//        }
+//        totalMinView.layer.cornerRadius = 5
+//        totalMinView.layer.masksToBounds = true
+//        dailyStreakView.layer.cornerRadius = 5
+//        dailyStreakView.layer.masksToBounds = true
+//    }
     
 //    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        switch (indexPath.row) {
@@ -75,8 +89,6 @@ class SummaryViewController: UIViewController {
 
 
 }
-
-
 
 class badgesTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
     
@@ -121,32 +133,32 @@ class badgesTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
     }
 }
     
-class dailyGoalTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-        
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dailyGoalCell = tableView.dequeueReusableCell(withIdentifier: "dailyGoalIdentifier", for: indexPath) as? DailyGoalsCell
-        
-        func createDailyGoalPicker() {
-            //create toolbar
-            let toolbar = UIToolbar()
-            toolbar.sizeToFit()
-            
-            //bar button
-            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
-            toolbar.setItems([doneButton], animated: true)
-            //assign toolbar
-            dailyGoalCell?.dailyGoalDetail.inputAccessoryView = toolbar
-            
-            //assign picker to text field
-            dailyGoalCell?.dailyGoalDetail.inputView = dailyGoalPicker
-        }
-        
-        return dailyGoalCell!
-    }
-}
+//class dailyGoalTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let dailyGoalCell = tableView.dequeueReusableCell(withIdentifier: "dailyGoalIdentifier", for: indexPath) as? DailyGoalsCell
+//
+//        func createDailyGoalPicker() {
+//            //create toolbar
+//            let toolbar = UIToolbar()
+//            toolbar.sizeToFit()
+//
+//            //bar button
+//            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+//            toolbar.setItems([doneButton], animated: true)
+//            //assign toolbar
+//            dailyGoalCell?.dailyGoalDetail.inputAccessoryView = toolbar
+//
+//            //assign picker to text field
+//            dailyGoalCell?.dailyGoalDetail.inputView = dailyGoalPicker
+//        }
+//
+//        return dailyGoalCell!
+//    }
+//}
 
 //override func prepare() {
 //    super.prepare()
