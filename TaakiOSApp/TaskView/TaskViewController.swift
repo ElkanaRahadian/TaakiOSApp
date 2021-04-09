@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TaskViewController: UIViewController {
+class TaskViewController: UIViewController, UITextFieldDelegate {
     @IBAction func taskSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
@@ -18,8 +18,20 @@ class TaskViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func addButton(_ sender: UIBarButtonItem) {
+//        createData(estimateDuration: <#T##Int#>, taskName: addTaskName)
+    }
+    
+    
+    
     @IBOutlet weak var taskSearchBar: UISearchBar!
     @IBOutlet weak var taskTableView: UITableView!
+    @IBOutlet weak var newTaskTextField: UITextField!
+    
     
     var taskCollection = [TaskModel]()
     var status: String!
@@ -27,9 +39,12 @@ class TaskViewController: UIViewController {
     var filteredData = [TaskModel]()
     var searching = false
     
+
     var taskArray = ["Lo-Fi Prototype", "Hi-Fi Prototype", "Self Learning", "Skripsi", "Ujian Kalkulus"]
     var durationArray = [60, 120, 60, 150, 120]
     var statusArray = ["DONE", "PENDING", "DONE", "PENDING", "DONE"]
+    
+    var addTaskName: String!
     
     
     override func viewDidLoad() {
@@ -46,37 +61,71 @@ class TaskViewController: UIViewController {
         taskSearchBar.delegate = self
         taskSearchBar.backgroundImage = UIImage()
         
+//        newTaskTextField.delegate = self
+//        newTaskTextField.returnKeyType = .done
+//        newTaskTextField.autocorrectionType = .no
+        newTaskTextField.becomeFirstResponder()
+        
+//        textFieldConfigt()
+        
         setUpInitialDataToCoreData()
 
     }
     
+//    private func textFieldConfigt() {
+//
+//
+//    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+        addTaskName = textField.text
+        return true
+    }
+    
     func setUpInitialDataToCoreData() {
-//        if taskCollection.count == 0 {
-//            createData()
-//        }
+        if taskCollection.count == 0 {
+            createData()
+        }
         
         retrieveData()
         taskTableView.reloadData()
         
     }
     
-    // function create data
+//     function create data
     func createData() {
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
+
         let manageContext = appDelegate.persistentContainer.viewContext
-        
+
         guard let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: manageContext) else { return }
-        
+
+
         for i in 1...taskArray.count {
-            
+
             let task = NSManagedObject(entity: taskEntity, insertInto: manageContext)
             task.setValue(durationArray[i-1], forKey: "estimate_duration")
             task.setValue(taskArray[i-1], forKey: "task_name")
             task.setValue(statusArray[i-1], forKey: "status")
         }
     }
+    
+//    func createData(estimateDuration: Int, taskName: String) {
+//
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//        let manageContext = appDelegate.persistentContainer.viewContext
+//
+//        guard let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: manageContext) else { return }
+//
+//
+//        let task = NSManagedObject(entity: taskEntity, insertInto: manageContext)
+//        task.setValue(estimateDuration, forKey: "estimate_duration")
+//        task.setValue(taskName, forKey: "task_name")
+//        task.setValue("PENDING", forKey: "status")
+//    }
     
     // function retrieve data
     func retrieveData() {
@@ -225,3 +274,4 @@ extension TaskViewController: UISearchBarDelegate {
             searchBar.resignFirstResponder()
     }
 }
+
