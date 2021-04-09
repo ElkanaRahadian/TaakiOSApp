@@ -20,10 +20,13 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var totalMinLabel: UILabel!
     @IBOutlet weak var dailyStreakLabel: UILabel!
     
-    @IBOutlet weak var setDailyGoalBtn: UIButton!
+    @IBOutlet weak var dailyGoalsDetail: UITextField!
+    
+    
     let badgesClass = badgesTableView()
 //    let dailyGoalClass = dailyGoalTableView()
 //    let dailyGoalPickerClass = createDailyGoalPicker()
+    let timePicker = UIDatePicker()
  
     
     var array = ["1130", "100"]
@@ -40,6 +43,29 @@ class SummaryViewController: UIViewController {
         self.badgesTable.reloadData()
 //        self.dailyGoalTable.reloadData()
         
+        createTimePicker()
+    }
+    
+    func createToolbar() -> UIToolbar {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        return toolbar
+    }
+    
+    func createTimePicker() {
+        timePicker.preferredDatePickerStyle = .wheels
+        timePicker.datePickerMode = .countDownTimer
+        dailyGoalsDetail.inputView = timePicker
+        dailyGoalsDetail.inputAccessoryView = createToolbar()
+    }
+    
+    @objc func donePressed() {
+        self.dailyGoalsDetail.text = "\(Int(timePicker.countDownDuration)/60) min"
+        self.view.endEditing(true)
     }
     
 //    extension UIView {
