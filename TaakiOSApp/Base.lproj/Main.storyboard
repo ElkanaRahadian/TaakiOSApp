@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XNM-iJ-Xz2">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,10 +31,13 @@
             <objects>
                 <navigationController id="Qth-aq-BCa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Focus" image="timer" catalog="system" id="rDG-AX-vBu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WoM-Xh-xcV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="WoM-Xh-xcV">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="f3B-vd-8Qp" kind="relationship" relationship="rootViewController" id="mc5-fx-spg"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZ3-c7-xHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +58,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGf-gJ-oVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="572"/>
+        </scene>
+        <!--FocusView-->
+        <scene sceneID="a1C-dj-D8I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FocusView" id="f3B-vd-8Qp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OIv-z8-EAK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAV-II-hWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="990"/>
         </scene>
         <!--TaskView-->
         <scene sceneID="Ahf-a7-j1i">
@@ -82,7 +95,7 @@
                 <navigationController id="GLT-M0-G49" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Summary" image="chart.bar" catalog="system" id="TaZ-zw-w2J"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="zgs-1s-bZi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
