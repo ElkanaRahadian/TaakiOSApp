@@ -17,7 +17,6 @@ class SummaryViewController: UIViewController {
 
     @IBOutlet weak var badgesTable: UITableView!
     @IBOutlet weak var dailyGoalTable: UITableView!
-    @IBOutlet weak var statisticsCollection: UICollectionView!
     
     @IBOutlet weak var totalMinLabel: UILabel!
     @IBOutlet weak var dailyStreakLabel: UILabel!
@@ -40,7 +39,23 @@ class SummaryViewController: UIViewController {
         
         self.badgesTable.reloadData()
         self.dailyGoalTable.reloadData()
+        
     }
+    
+//    extension UIView {
+//        @IBInspectable var cornerRadius: CGFloat {
+//            get {
+//                return layer.cornerRadius
+//            } set {
+//                layer.cornerRadius = 5
+//                layer.masksToBounds = true
+//            }
+//        }
+//        totalMinView.layer.cornerRadius = 5
+//        totalMinView.layer.masksToBounds = true
+//        dailyStreakView.layer.cornerRadius = 5
+//        dailyStreakView.layer.masksToBounds = true
+//    }
     
 //    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        switch (indexPath.row) {
