@@ -17,6 +17,7 @@
 		9C41E6F0261C64FE0090EB56 /* BadgesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */; };
 		9C53ECA3261CC7EC004D6D74 /* DailyGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */; };
 		9C578E3E261F1EB200D7158E /* SummaryBaruViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C578E3D261F1EB200D7158E /* SummaryBaruViewController.swift */; };
+		E6479320262198CF0055AF4F /* FocusCountDownView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E647931F262198CF0055AF4F /* FocusCountDownView.storyboard */; };
 		F758116F261AD07000B97E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758116E261AD07000B97E04 /* AppDelegate.swift */; };
 		F7581171261AD07000B97E04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581170261AD07000B97E04 /* SceneDelegate.swift */; };
 		F7581173261AD07000B97E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7581172261AD07000B97E04 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		9C41E6EF261C64FE0090EB56 /* BadgesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewCell.swift; sourceTree = "<group>"; };
 		9C53ECA1261CC7EC004D6D74 /* DailyGoalsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyGoalsCell.swift; sourceTree = "<group>"; };
 		9C578E3D261F1EB200D7158E /* SummaryBaruViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBaruViewController.swift; sourceTree = "<group>"; };
+		E647931F262198CF0055AF4F /* FocusCountDownView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusCountDownView.storyboard; sourceTree = "<group>"; };
 		F758116B261AD07000B97E04 /* TaakiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaakiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758116E261AD07000B97E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7581170261AD07000B97E04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				F7803DFA2620ADE0003473FF /* FocusPageView.storyboard */,
 				F7803DFE2620B54D003473FF /* FocusAddTaskViewController.swift */,
 				F7803E0B2620E667003473FF /* FocusCountdownViewController.swift */,
+				E647931F262198CF0055AF4F /* FocusCountDownView.storyboard */,
 			);
 			path = FocusPageView;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				F758117E261AD07000B97E04 /* LaunchScreen.storyboard in Resources */,
 				F758117B261AD07000B97E04 /* Assets.xcassets in Resources */,
 				F7581176261AD07000B97E04 /* Main.storyboard in Resources */,
+				E6479320262198CF0055AF4F /* FocusCountDownView.storyboard in Resources */,
 				F7803DFB2620ADE0003473FF /* FocusPageView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

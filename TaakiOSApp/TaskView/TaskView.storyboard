@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="110.76923076923076" y="176.30331753554501"/>
         </scene>
-        <!--FocusCountdown-->
+        <!--FocusCountDownView-->
         <scene sceneID="0v6-FE-ALI">
             <objects>
-                <viewControllerPlaceholder storyboardName="FocusCountdown" id="pHN-LI-egD" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="FocusCountDownView" id="pHN-LI-egD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upk-Jg-np9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="639" y="176"/>
