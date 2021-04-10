@@ -9,6 +9,9 @@ class FocusCountdownViewController : UIViewController {
     var timer : Timer = Timer()
     var count : Int = 0
     var timerCounting : Bool = false
+    
+    var taskName: String!
+    var duration: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
