@@ -27,7 +27,7 @@ class FocusCountdownVC: UIViewController {
             self.count = 0
             self.timer.invalidate()
             self.TimerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
-            self.startStopButton.setTitle("START", for: .normal)
+            self.startStopButton.setTitle("Start", for: .normal)
             self.startStopButton.setTitleColor(UIColor.green, for: .normal)
         }))
         
