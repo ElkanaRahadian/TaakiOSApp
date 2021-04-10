@@ -1,10 +1,3 @@
-//
-//  BadgesTableViewCell.swift
-//  TaakiOSApp
-//
-//  Created by Vivian Angela on 06/04/21.
-//
-
 import UIKit
 
 class BadgesTableViewCell: UITableViewCell {

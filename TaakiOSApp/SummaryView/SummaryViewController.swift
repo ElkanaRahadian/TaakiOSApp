@@ -1,10 +1,3 @@
-//
-//  SummaryViewController.swift
-//  TaakiOSApp
-//
-//  Created by Vivian Angela on 06/04/21.
-//
-
 import UIKit
 
 let badgesTitle = ["Taak Challenger", "Triplet Challenger", "Wild Fire", "Sage", "Weekend Warrior" ]

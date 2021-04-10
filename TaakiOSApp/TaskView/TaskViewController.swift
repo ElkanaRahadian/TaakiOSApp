@@ -1,10 +1,3 @@
-//
-//  TaskViewController.swift
-//  TaakiOSApp
-//
-//  Created by Apriliani Putri Prasetyo on 05/04/21.
-//
-
 import UIKit
 import CoreData
 

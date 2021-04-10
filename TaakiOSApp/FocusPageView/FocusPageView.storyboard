@@ -86,7 +86,11 @@
                                                 <action selector="addTaskCancelButton:" destination="hlb-mT-MvC" id="r37-or-B2W"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="1PG-gp-sdv"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="1PG-gp-sdv">
+                                            <connections>
+                                                <segue destination="Ply-wO-p2Q" kind="presentation" modalPresentationStyle="fullScreen" id="ayR-rS-OBQ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -210,15 +214,15 @@
             </objects>
             <point key="canvasLocation" x="1682" y="178"/>
         </scene>
-        <!--TaskView-->
+        <!--FocusCountdown-->
         <scene sceneID="0Uy-Gf-tnE">
             <objects>
-                <viewControllerPlaceholder storyboardName="TaskView" id="Ply-wO-p2Q" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FocusCountdown" id="Ply-wO-p2Q" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ji6-88-CzG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DX-hZ-1QY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2347" y="121"/>
+            <point key="canvasLocation" x="922" y="584"/>
         </scene>
     </scenes>
     <resources>

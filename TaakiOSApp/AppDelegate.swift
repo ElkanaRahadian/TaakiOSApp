@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  TaakiOSApp
-//
-//  Created by Elkana Antonio on 05/04/21.
-//
-
 import UIKit
 import CoreData
 
