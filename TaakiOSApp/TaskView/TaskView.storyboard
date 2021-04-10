@@ -36,7 +36,7 @@
                                     <segment title="Done"/>
                                 </segments>
                                 <connections>
-                                    <action selector="taskSegmentedControl:" destination="bFU-WV-VGJ" eventType="valueChanged" id="WsW-LX-guG"/>
+                                    <action selector="statusSegmentedControl:" destination="bFU-WV-VGJ" eventType="valueChanged" id="cP9-Dl-5ZO"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zp0-HW-m2T">
@@ -94,13 +94,22 @@
                         <color key="backgroundColor" red="0.92156862745098034" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="taskSearchBar" destination="FhF-pS-Znj" id="zhM-ga-PPg"/>
-                        <outlet property="taskTableView" destination="zp0-HW-m2T" id="q1j-Tn-cJf"/>
+                        <outlet property="taskSearchBar" destination="FhF-pS-Znj" id="Qxg-WJ-m37"/>
+                        <outlet property="taskTableView" destination="zp0-HW-m2T" id="Ha8-nx-bgb"/>
+                        <segue destination="pHN-LI-egD" kind="presentation" identifier="focusCountdownSegue" modalPresentationStyle="fullScreen" id="Vbp-BE-fWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZJ-Ff-2NV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110.76923076923076" y="176.30331753554501"/>
+        </scene>
+        <!--FocusPageView-->
+        <scene sceneID="0v6-FE-ALI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FocusPageView" id="pHN-LI-egD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upk-Jg-np9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="52"/>
         </scene>
     </scenes>
     <resources>

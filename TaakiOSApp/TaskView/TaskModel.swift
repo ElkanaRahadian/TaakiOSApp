@@ -8,7 +8,8 @@
 import Foundation
 
 struct TaskModel {
-    var taskName  = ""
-    var estimateDuration = 0
+    var taskName: String
+    var estimateDuration: Int
+    var status: String
     
 }
