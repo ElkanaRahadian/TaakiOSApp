@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CountdownVC-->
         <scene sceneID="4jD-ip-5Ea">
             <objects>
-                <viewController id="NkK-OR-vcf" sceneMemberID="viewController">
+                <viewController id="NkK-OR-vcf" customClass="CountdownVC" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BPn-nS-5BX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                                 <state key="normal" title="Start" backgroundImage="Button-White">
                                     <color key="titleColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="NkK-OR-vcf" eventType="touchUpInside" id="hDk-MN-huH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-7l-ftR">
                                 <rect key="frame" x="16" y="642" width="177" height="58"/>
@@ -41,6 +44,9 @@
                                 <state key="normal" title="Cancel" backgroundImage="Button-White">
                                     <color key="titleColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="NkK-OR-vcf" eventType="touchUpInside" id="pmj-4i-N9s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du4-a7-VSP">
                                 <rect key="frame" x="140" y="105" width="110" height="27"/>
@@ -53,6 +59,11 @@
                         <viewLayoutGuide key="safeArea" id="mOy-DR-0cE"/>
                         <color key="backgroundColor" red="0.93372356889999997" green="0.98419791459999995" blue="0.9882379174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="zcb-7l-ftR" id="3NK-2u-KVE"/>
+                        <outlet property="startStopButton" destination="o43-O3-Zaa" id="Bii-Eo-7zy"/>
+                        <outlet property="timerLabel" destination="gTi-aI-cgJ" id="4c2-I7-Ei0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1S-y4-NEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
