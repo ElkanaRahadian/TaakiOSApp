@@ -86,11 +86,7 @@
                                                 <action selector="addTaskCancelButton:" destination="hlb-mT-MvC" id="r37-or-B2W"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="1PG-gp-sdv">
-                                            <connections>
-                                                <segue destination="fxi-c1-KDH" kind="presentation" modalPresentationStyle="fullScreen" id="sa1-5z-XKv"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="1PG-gp-sdv"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -213,6 +209,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5V-ka-xc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1682" y="178"/>
+        </scene>
+        <!--TaskView-->
+        <scene sceneID="0Uy-Gf-tnE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TaskView" id="Ply-wO-p2Q" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ji6-88-CzG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DX-hZ-1QY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2347" y="121"/>
         </scene>
     </scenes>
     <resources>
