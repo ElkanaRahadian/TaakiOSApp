@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="639" y="176"/>
         </scene>
-        <!--Task View Add TaskVC-->
+        <!--Task Add New Task View Controller-->
         <scene sceneID="9LC-XE-Aq7">
             <objects>
-                <viewController id="moD-Ec-u8y" customClass="TaskViewAddTaskVC" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="moD-Ec-u8y" customClass="TaskAddNewTaskViewController" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKp-XY-K41">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdA-TL-mMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="92"/>
+            <point key="canvasLocation" x="1208" y="110"/>
         </scene>
     </scenes>
     <resources>
