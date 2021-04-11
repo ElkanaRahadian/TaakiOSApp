@@ -230,11 +230,14 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
-        taskName = taskCollectionPending[indexPath.row].taskName
-        duration = taskCollectionPending[indexPath.row].estimateDuration
+        if statusSegment == "PENDING" {
+            
+            selectedIndex = indexPath.row
+            taskName = taskCollectionPending[indexPath.row].taskName
+            duration = taskCollectionPending[indexPath.row].estimateDuration
 
-        self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
+            self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -19,8 +19,8 @@
                                 <rect key="frame" x="-173" y="181" width="737" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOg-Mg-MlJ">
-                                <rect key="frame" x="140" y="101" width="110" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOg-Mg-MlJ">
+                                <rect key="frame" x="20" y="101" width="374" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" red="0.1058823529" green="0.56470588239999997" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -65,11 +65,12 @@
                         <outlet property="cancelButton" destination="L4P-kn-PPn" id="DaN-Tj-cut"/>
                         <outlet property="countdownLabel" destination="rGP-qJ-4UJ" id="fei-TM-40N"/>
                         <outlet property="startFinishButton" destination="gNS-tY-UZ9" id="Mup-Py-Lee"/>
+                        <outlet property="taskNameLabel" destination="KOg-Mg-MlJ" id="2PZ-Yk-tfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWy-2B-JXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682" y="178"/>
+            <point key="canvasLocation" x="1681.1594202898552" y="177.45535714285714"/>
         </scene>
     </scenes>
     <resources>
