@@ -7,10 +7,10 @@ class FocusCountdownViewController : UIViewController {
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var startFinishButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    
     var timer : Timer = Timer()
     var count : Int = 0
     var timerCounting : Bool = false
-    
     var taskName: String!
     var duration: Int!
 
@@ -18,6 +18,7 @@ class FocusCountdownViewController : UIViewController {
         super.viewDidLoad()
         startFinishButton.setTitleColor(UIColor.green, for: .normal)
         taskNameLabel.text = taskName
+        count = duration*60
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -49,25 +50,25 @@ class FocusCountdownViewController : UIViewController {
         }
     }
 
-    @objc func timerCounter() -> Void {
-        count = count + 1
+    @objc func timerCounter() {
+        count -= 1
         let time = secondsToHoursMinutesSecond(seconds: count)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         countdownLabel.text = timeString
+        
     }
 
     func secondsToHoursMinutesSecond(seconds : Int) -> (Int,Int, Int) {
         return (seconds / 3600, ((seconds % 3600) / 60), ((seconds % 3600) % 60))
     }
 
-    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String{
+    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String {
         var timeString = ""
         timeString += String(format: "%02d", hours)
-        timeString += " : "
+        timeString += ":"
         timeString += String(format: "%02d", minutes)
-        timeString += " : "
+        timeString += ":"
         timeString += String(format: "%02d", seconds)
-        timeString += " : "
         return timeString
     }
 }
