@@ -8,6 +8,8 @@ class TaskViewAddTaskVC : UIViewController {
     @IBOutlet weak var durationTextField: UITextField!
     let timePicker = UIDatePicker()
     
+    var newTask = [TaskModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameField.delegate = self
@@ -17,6 +19,23 @@ class TaskViewAddTaskVC : UIViewController {
     
     @IBAction func addTaskCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addTaskAddButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "taskViewSegue", sender: self)
+//        dismiss(animated: true, completion: nil)
+        addTask()
+    }
+    
+    func addTask() {
+        newTask.append(contentsOf: [TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60 , status: "PENDING")])
+        print("\(newTask)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? TaskViewController {
+            destinationVC.taskCollectionPending.append(contentsOf: newTask)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

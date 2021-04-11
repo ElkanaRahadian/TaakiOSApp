@@ -80,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Task Title" id="bUi-XZ-KdQ">
+                                    <navigationItem title="New Task" id="bUi-XZ-KdQ">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="URQ-da-Xia">
                                             <connections>
                                                 <action selector="addTaskCancelButton:" destination="hlb-mT-MvC" id="r37-or-B2W"/>

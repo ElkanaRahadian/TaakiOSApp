@@ -3,6 +3,7 @@ import UIKit
 
 class FocusCountdownViewController : UIViewController {
 
+    @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var startFinishButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
@@ -16,6 +17,7 @@ class FocusCountdownViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startFinishButton.setTitleColor(UIColor.green, for: .normal)
+        taskNameLabel.text = taskName
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
