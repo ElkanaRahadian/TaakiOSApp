@@ -19,6 +19,10 @@ class FocusAddTaskViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addTaskAddButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         taskNameField.resignFirstResponder()
     }
@@ -41,6 +45,13 @@ class FocusAddTaskViewController: UIViewController {
     @objc func donePressed() {
         self.durationTextField.text = "\(Int(timePicker.countDownDuration)/60) min"
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? FocusCountdownViewController {
+            destinationVC.taskName = "\(taskNameField.text ?? "")"
+            destinationVC.duration = Int(timePicker.countDownDuration)/60
+        }
     }
     
 }

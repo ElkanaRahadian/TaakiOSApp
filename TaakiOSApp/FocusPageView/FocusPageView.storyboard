@@ -88,7 +88,8 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="1PG-gp-sdv">
                                             <connections>
-                                                <segue destination="Ply-wO-p2Q" kind="presentation" modalPresentationStyle="fullScreen" id="ayR-rS-OBQ"/>
+                                                <action selector="addTaskAddButton:" destination="hlb-mT-MvC" id="cGz-RV-cOE"/>
+                                                <segue destination="Ply-wO-p2Q" kind="presentation" identifier="focusCountdownSegue" modalPresentationStyle="fullScreen" id="ayR-rS-OBQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
