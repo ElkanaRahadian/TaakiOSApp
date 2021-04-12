@@ -19,7 +19,6 @@ class TaskViewController: UIViewController {
     var duration = 0
     var image: UIImage?
     var filteredData = [TaskModel]()
-    var pinned = false
     var searching = false
     var selectedIndex = 0
     var statusSegment: String = "PENDING"
@@ -93,9 +92,19 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 taskCell.taskDurationLabel.text = "\(taskCollectionDone[indexPath.row].estimateDuration) min"
             } else {
-                if (pinned) {
-                    taskCell.taskDurationLabel.text = "\(UIImage.init(named: "pin")) \(taskCollectionPending[indexPath.row].estimateDuration) min"
+                
+                if (taskCollectionPending[indexPath.row].pin) {
+                    
+                    let fullString = NSMutableAttributedString(string: "")
+                    let image = NSTextAttachment()
+                    image.image = UIImage(named: "pin")
+                    let imageString = NSAttributedString(attachment: image)
+
+                    fullString.append(imageString)
+                    fullString.append(NSAttributedString(string: " \(taskCollectionPending[indexPath.row].estimateDuration) min"))
+                    taskCell.taskDurationLabel.attributedText = fullString
                 } else {
+                    
                     taskCell.taskDurationLabel.text = "\(taskCollectionPending[indexPath.row].estimateDuration) min"
                 }
                 
@@ -120,9 +129,11 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         delete.image = UIImage.init(named: "trash")
     
         if statusSegment == "PENDING" {
+            
             let configuration = UISwipeActionsConfiguration(actions: [delete])
             return configuration
         } else {
+            
             let configuration = UISwipeActionsConfiguration(actions: [])
             return configuration
         }
@@ -133,19 +144,19 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         // function pin task
         let pin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
 
-
+            taskCollectionPending[indexPath.row].pin = true
             let element = self.taskCollectionPending.remove(at: indexPath.row)
             self.taskCollectionPending.insert(element, at: 0)
-            pinned = true
             taskTableView.reloadData()
             print("Pin task: \(self.taskCollectionPending[indexPath.row].taskName)")
         })
         
+        // function unpin task
         let unpin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
 
+            taskCollectionPending[indexPath.row].pin = false
             let element = self.taskCollectionPending.remove(at: indexPath.row)
             self.taskCollectionPending.insert(element, at: taskCollectionPending.endIndex)
-            pinned = false
             taskTableView.reloadData()
             print("Unpin task: \(self.taskCollectionPending[indexPath.row].taskName)")
         })
@@ -157,14 +168,18 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         
 
         if statusSegment == "PENDING" {
-            if pinned {
+            
+            if taskCollectionPending[indexPath.row].pin {
+                
                 let configuration = UISwipeActionsConfiguration(actions: [unpin])
                 return configuration
             } else {
+                
                 let configuration = UISwipeActionsConfiguration(actions: [pin])
                 return configuration
             }
         } else {
+            
             let configuration = UISwipeActionsConfiguration(actions: [])
             return configuration
         }
@@ -201,6 +216,7 @@ extension TaskViewController: UISearchBarDelegate {
         filteredData = []
         
         if statusSegment == "DONE" {
+            
             let taskNameArr = taskCollectionDone.map{ $0.taskName }
             if searchText == "" {
 
