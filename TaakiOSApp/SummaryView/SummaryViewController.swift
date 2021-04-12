@@ -2,8 +2,8 @@ import UIKit
 
 let badgesTitle = ["Taak Challenger", "2-Hours Focus Master", "Septuple Sublime", "Ten Triumphant", "Weekend Wonder" ]
 let badgesDetail = ["First Task Completed", "Focused for 120 minutes", "Reach a 7 day streak", "Completed 10 tasks", "Achieve focus on weekend"]
-let progressDetail = ["1/1", "90/120", "0/7", "3/10", "0/1"]
-let badgesProgressView = [1, 0.8, 0.1, 0.3, 0]
+let progressDetail = ["1/1", "90/120", "1/7", "2/10", "0/1"]
+let badgesProgressView = [1, 0.7, 0.1, 0.2, 0]
 let badgesImage = ["badge-1", "badge-2", "badge-3", "badge-4", "badge-5"]
 
 let dailyGoalPicker = UIDatePicker()
