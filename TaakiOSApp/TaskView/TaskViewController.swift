@@ -44,12 +44,6 @@ class TaskViewController: UIViewController {
         taskSearchBar.delegate = self
         taskSearchBar.backgroundImage = UIImage()
     }
-    
-    func pinTask(array: [TaskModel], fromIndex: Int, toIndex: Int) {
-        var arr = array
-        let element = arr.remove(at: fromIndex)
-        arr.insert(element, at: toIndex)
-    }
 }
 
 extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
@@ -61,8 +55,10 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             return filteredData.count
         } else {
              if statusSegment == "DONE"{
+                
                 return taskCollectionDone.count
              } else {
+                
                 return taskCollectionPending.count
              }
         }
@@ -89,7 +85,6 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             if statusSegment == "DONE"{
                 
                 taskCell.taskTitleLabel.text = taskCollectionDone[indexPath.row].taskName
-                
                 taskCell.taskDurationLabel.text = "\(taskCollectionDone[indexPath.row].estimateDuration) min"
             } else {
                 
@@ -161,11 +156,10 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             print("Unpin task: \(self.taskCollectionPending[indexPath.row].taskName)")
         })
         
-
-        pin.image = UIImage.init(named: "pin")
         pin.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        pin.image = UIImage.init(named: "pin")
         unpin.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-        
+        unpin.image = UIImage.init(named: "unpin")
 
         if statusSegment == "PENDING" {
             
