@@ -41,7 +41,6 @@ class TaskViewController: UIViewController {
         taskTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         taskSearchBar.delegate = self
-//        taskSearchBar.becomeFirstResponder()
         taskSearchBar.backgroundImage = UIImage()
     }
 }
@@ -107,8 +106,13 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         
         delete.image = UIImage.init(named: "trash")
     
-        let configuration = UISwipeActionsConfiguration(actions: [delete])
-        return configuration
+        if statusSegment == "PENDING" {
+            let configuration = UISwipeActionsConfiguration(actions: [delete])
+            return configuration
+        } else {
+            let configuration = UISwipeActionsConfiguration(actions: [])
+            return configuration
+        }
     }
     
     // function select task
@@ -154,6 +158,7 @@ extension TaskViewController: UISearchBarDelegate {
                     if taskName.lowercased().contains(searchText.lowercased()) {
 
                         filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
+                        searching = false
                     }
                 }
             }
@@ -171,6 +176,7 @@ extension TaskViewController: UISearchBarDelegate {
                     if taskName.lowercased().contains(searchText.lowercased()) {
 
                         filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
+                        searching = false
                     }
                 }
             }
@@ -180,6 +186,7 @@ extension TaskViewController: UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            searchBar.resignFirstResponder()
+        searchBar.resignFirstResponder()
+        searching = false
     }
 }
