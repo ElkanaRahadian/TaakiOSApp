@@ -21,11 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-kw-gxG">
-                                <rect key="frame" x="107" y="393" width="177" height="58"/>
+                                <rect key="frame" x="111" y="397" width="169" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Start Focus" backgroundImage="Button-White">
-                                    <color key="titleColor" red="0.13333333333333333" green="0.17254901960784313" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Start Focus" backgroundImage="FocusView-Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="hlb-mT-MvC" kind="presentation" id="dSP-5N-zey"/>
@@ -47,11 +47,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" red="0.37564396859999999" green="0.86187070610000005" blue="0.9019722939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W61-FT-Te5">
-                                <rect key="frame" x="76" y="89" width="36" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 / 120min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W61-FT-Te5">
+                                <rect key="frame" x="76" y="89" width="67" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -156,7 +156,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button-White" width="177" height="58"/>
+        <image name="FocusView-Button" width="169" height="50"/>
         <image name="FocusView-Circle" width="450" height="450"/>
         <image name="FocusView-DailyGoalIcon" width="60" height="60"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
