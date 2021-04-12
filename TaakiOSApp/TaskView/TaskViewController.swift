@@ -71,6 +71,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         taskCell.layer.cornerRadius = 10
         taskCell.layer.borderWidth = 5
         taskCell.layer.borderColor = #colorLiteral(red: 0.9359967113, green: 0.9867416024, blue: 0.9907793403, alpha: 1)
+        taskCell.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.9254901961, blue: 0.9411764706, alpha: 1)
         taskCell.contentView.layer.cornerRadius = 10
         
         if searching {
