@@ -55,7 +55,6 @@ class FocusCountdownViewController : UIViewController {
         let time = secondsToHoursMinutesSecond(seconds: count)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         countdownLabel.text = timeString
-        
     }
 
     func secondsToHoursMinutesSecond(seconds : Int) -> (Int,Int, Int) {
