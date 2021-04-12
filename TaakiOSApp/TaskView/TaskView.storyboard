@@ -112,7 +112,7 @@
                 <viewControllerPlaceholder storyboardName="FocusCountDownView" id="pHN-LI-egD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upk-Jg-np9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="176"/>
+            <point key="canvasLocation" x="112" y="587"/>
         </scene>
         <!--Task Add New Task View Controller-->
         <scene sceneID="9LC-XE-Aq7">

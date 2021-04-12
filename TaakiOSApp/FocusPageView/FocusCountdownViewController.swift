@@ -41,7 +41,7 @@ class FocusCountdownViewController : UIViewController {
             timerCounting = false
             timer.invalidate()
             startFinishButton.setTitle("Start", for: .normal)
-            startFinishButton.setTitleColor(UIColor.green, for: .normal)
+//            startFinishButton.setTitleColor(UIColor.green, for: .normal)
         }
         else {
             timerCounting = true
