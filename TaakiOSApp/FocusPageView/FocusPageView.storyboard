@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient circle" translatesAutoresizingMaskIntoConstraints="NO" id="VL6-ju-ZUe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FocusView-Circle" translatesAutoresizingMaskIntoConstraints="NO" id="VL6-ju-ZUe">
                                 <rect key="frame" x="-173" y="181" width="737" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -31,14 +31,9 @@
                                     <segue destination="hlb-mT-MvC" kind="presentation" id="dSP-5N-zey"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DailyGoalCircle" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-oA-L4g">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FocusView-DailyGoalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-oA-L4g">
                                 <rect key="frame" x="26" y="62" width="53" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k6U-pC-RgK">
-                                <rect key="frame" x="35" y="68" width="34" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.13333333333333333" green="0.17254901960784313" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0d-mc-6hF">
                                 <rect key="frame" x="76" y="64" width="57" height="15"/>
@@ -61,7 +56,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x1f-Vw-gKz"/>
-                        <color key="backgroundColor" red="0.93372356889999997" green="0.98419791459999995" blue="0.9882379174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqf-Pr-9CV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -162,10 +157,9 @@
     </scenes>
     <resources>
         <image name="Button-White" width="177" height="58"/>
-        <image name="DailyGoalCircle" width="50" height="50"/>
+        <image name="FocusView-Circle" width="450" height="450"/>
+        <image name="FocusView-DailyGoalIcon" width="60" height="60"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="clock" catalog="system" width="128" height="121"/>
-        <image name="gradient circle" width="329" height="329"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
