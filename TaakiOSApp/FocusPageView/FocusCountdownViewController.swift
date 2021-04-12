@@ -37,16 +37,22 @@ class FocusCountdownViewController : UIViewController {
     }
 
     @IBAction func startFinishButton(_ sender: Any) {
-        if (timerCounting) {
-            timerCounting = false
+        if startFinishButton.currentTitle == "Finish" {
+            
+            let alert = UIAlertController(title: "Finish focus session?", message: "You still have \(count/60) minute left", preferredStyle: .alert)
             timer.invalidate()
-            startFinishButton.setTitle("Start", for: .normal)
-//            startFinishButton.setTitleColor(UIColor.green, for: .normal)
-        }
-        else {
-            timerCounting = true
+            alert.addAction(UIAlertAction(title: "Not Yet", style: .cancel, handler: { [self] (_) in
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+            }))
+            alert.addAction(UIAlertAction(title: "Finish Focus", style: .default, handler: { (_) in
+//              self.count = 0
+                self.timer.invalidate()
+//              self.dismiss(animated: true, completion: nil)
+            }))
+                self.present(alert, animated: true, completion: nil)
+        } else {
+            
             startFinishButton.setTitle("Finish", for: .normal)
-//            startFinishButton.setTitleColor(UIColor.red, for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
