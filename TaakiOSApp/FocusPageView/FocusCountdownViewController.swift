@@ -16,21 +16,22 @@ class FocusCountdownViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startFinishButton.setTitleColor(UIColor.green, for: .normal)
+//        startFinishButton.setTitleColor(UIColor.green, for: .normal)
         taskNameLabel.text = taskName
         count = duration*60
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Cancel Countdown", message: "Are you sure you would like to cancel the countdown ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Would you like to end this focus session?", message: "All progress in this session will be lost", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Keep Focus", style: .cancel, handler: { (_) in }))
-        alert.addAction(UIAlertAction(title: "End Focus", style: .default, handler: { (_) in
+        alert.addAction(UIAlertAction(title: "End Focus", style: .destructive, handler: { (_) in
             self.count = 0
             self.timer.invalidate()
             self.countdownLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
             self.startFinishButton.setTitle("Start", for: .normal)
             self.startFinishButton.setTitleColor(UIColor.green, for: .normal)
+            self.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -45,7 +46,7 @@ class FocusCountdownViewController : UIViewController {
         else {
             timerCounting = true
             startFinishButton.setTitle("Finish", for: .normal)
-            startFinishButton.setTitleColor(UIColor.red, for: .normal)
+//            startFinishButton.setTitleColor(UIColor.red, for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
