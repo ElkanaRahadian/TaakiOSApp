@@ -15,9 +15,11 @@ class TaskViewController: UIViewController {
         }
         taskTableView.reloadData()
     }
-
+    
     var duration = 0
+    var image: UIImage?
     var filteredData = [TaskModel]()
+    var pinned = false
     var searching = false
     var selectedIndex = 0
     var statusSegment: String = "PENDING"
@@ -42,6 +44,12 @@ class TaskViewController: UIViewController {
         
         taskSearchBar.delegate = self
         taskSearchBar.backgroundImage = UIImage()
+    }
+    
+    func pinTask(array: [TaskModel], fromIndex: Int, toIndex: Int) {
+        var arr = array
+        let element = arr.remove(at: fromIndex)
+        arr.insert(element, at: toIndex)
     }
 }
 
@@ -82,11 +90,16 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             if statusSegment == "DONE"{
                 
                 taskCell.taskTitleLabel.text = taskCollectionDone[indexPath.row].taskName
+                
                 taskCell.taskDurationLabel.text = "\(taskCollectionDone[indexPath.row].estimateDuration) min"
             } else {
+                if (pinned) {
+                    taskCell.taskDurationLabel.text = "\(UIImage.init(named: "pin")) \(taskCollectionPending[indexPath.row].estimateDuration) min"
+                } else {
+                    taskCell.taskDurationLabel.text = "\(taskCollectionPending[indexPath.row].estimateDuration) min"
+                }
                 
                 taskCell.taskTitleLabel.text = taskCollectionPending[indexPath.row].taskName
-                taskCell.taskDurationLabel.text = "\(taskCollectionPending[indexPath.row].estimateDuration) min"
             }
 
         }
@@ -109,6 +122,48 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         if statusSegment == "PENDING" {
             let configuration = UISwipeActionsConfiguration(actions: [delete])
             return configuration
+        } else {
+            let configuration = UISwipeActionsConfiguration(actions: [])
+            return configuration
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        // function pin task
+        let pin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
+
+
+            let element = self.taskCollectionPending.remove(at: indexPath.row)
+            self.taskCollectionPending.insert(element, at: 0)
+            pinned = true
+            taskTableView.reloadData()
+            print("Pin task: \(self.taskCollectionPending[indexPath.row].taskName)")
+        })
+        
+        let unpin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
+
+            let element = self.taskCollectionPending.remove(at: indexPath.row)
+            self.taskCollectionPending.insert(element, at: taskCollectionPending.endIndex)
+            pinned = false
+            taskTableView.reloadData()
+            print("Unpin task: \(self.taskCollectionPending[indexPath.row].taskName)")
+        })
+        
+
+        pin.image = UIImage.init(named: "pin")
+        pin.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        unpin.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        
+
+        if statusSegment == "PENDING" {
+            if pinned {
+                let configuration = UISwipeActionsConfiguration(actions: [unpin])
+                return configuration
+            } else {
+                let configuration = UISwipeActionsConfiguration(actions: [pin])
+                return configuration
+            }
         } else {
             let configuration = UISwipeActionsConfiguration(actions: [])
             return configuration
