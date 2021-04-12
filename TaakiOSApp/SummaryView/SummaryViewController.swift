@@ -1,8 +1,10 @@
 import UIKit
 
-let badgesTitle = ["Taak Challenger", "Triplet Challenger", "Wild Fire", "Sage", "Weekend Warrior" ]
-let badgesDetail = ["First Task Completed", "3 Days Streak", "First Daily Goals Completed", "Gain 120 points", "Completed a task on Saturday and Sunday"]
-let progressDetail = ["0/1", "0/3", "0/1", "0/120", "0/2"]
+let badgesTitle = ["Taak Challenger", "2-Hours Focus Master", "Septuple Sublime", "Ten Triumphant", "Weekend Wonder" ]
+let badgesDetail = ["First Task Completed", "Focused for 120 minutes", "Reach a 7 day streak", "Completed 10 tasks", "Achieve focus on weekend"]
+let progressDetail = ["1/1", "90/120", "0/7", "3/10", "0/1"]
+let badgesProgressView = [1, 0.8, 0.1, 0.3, 0]
+let badgesImage = ["badge-1", "badge-2", "badge-3", "badge-4", "badge-5"]
 
 let dailyGoalPicker = UIDatePicker()
 
@@ -141,12 +143,23 @@ class badgesTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
         badgesCell?.badgesTitleLabel.text = badgesTitle[indexPath.row]
         badgesCell?.badgesDetailLabel.text = badgesDetail[indexPath.row]
         badgesCell?.badgesProgressDetail.text = progressDetail[indexPath.row]
+        badgesCell?.badgesProgressView.progress = Float(badgesProgressView[indexPath.row])
+        badgesCell?.badgesImage.image = UIImage(named: badgesImage[indexPath.row])
+       
         badgesCell?.badgesProgressView.transform.scaledBy(x: 10, y: 20) //gk berfungsi
         badgesCell?.layer.borderColor = #colorLiteral(red: 0.9333333333, green: 0.9843137255, blue: 0.9882352941, alpha: 1)
         badgesCell?.layer.borderWidth = 5
-        badgesCell?.layer.cornerRadius = 10
+        badgesCell?.layer.cornerRadius = 20
         badgesCell?.clipsToBounds = true
 //        badgesCell?.badgesImage.frame = CGRect(x: badgesCell!.frame, y: 10, width: 10, height: 113)
+        
+//        let progressView = UIProgressView(progressViewStyle: .default)
+//        progressView.frame = CGRect(x: 230, y: 20, width: 130, height: 130)
+//        progressView.progress += 0.5
+//        progressView.rightAnchor.accessibilityActivate()
+//        progressView.setProgress(Float(), animated: true)
+        
+//        badgesCell?.badgesProgressView.frame = CGRect(x: 10, y: 10, width: 120, height: 50)     
         
         return badgesCell!
     }
