@@ -23,8 +23,9 @@ class SummaryViewController: UIViewController {
 //    let dailyGoalPickerClass = createDailyGoalPicker()
     let timePicker = UIDatePicker()
  
-    
-    var array = ["1130", "100"]
+    var objectModel = [TaskModel]()
+    var linkedTaskViewController: TaskViewController? = nil
+//    var getTaskCollectionDone = linkedTaskViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,12 @@ class SummaryViewController: UIViewController {
 //        self.dailyGoalTable.reloadData()
         
         createTimePicker()
+    }
+    
+    func countTotalMin() {
+//        let totalMin = taskCollectionDone.map{ $0.estimateDuration }
+        
+        
     }
     
     func createToolbar() -> UIToolbar {
