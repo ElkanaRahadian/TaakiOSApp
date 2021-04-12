@@ -50,6 +50,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMp-QZ-Mly">
+                                                    <rect key="frame" x="20" y="19" width="75" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Taak Challenger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUo-zf-uaL">
                                                     <rect key="frame" x="110" y="26" width="228" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -64,22 +68,18 @@
                                                     <color key="textColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieu-6K-f31">
-                                                    <rect key="frame" x="281" y="68" width="57" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iB8-I3-enn">
                                                     <rect key="frame" x="110" y="81" width="163" height="4"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="progressTintColor" red="0.14117647058823529" green="0.43529411764705883" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMp-QZ-Mly">
-                                                    <rect key="frame" x="20" y="19" width="75" height="75"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieu-6K-f31">
+                                                    <rect key="frame" x="281" y="73" width="57" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <color key="highlightedColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.73725490196078436" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -142,7 +142,7 @@
                                 <rect key="frame" x="205" y="180" width="169" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rC9-4y-7mY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rC9-4y-7mY">
                                         <rect key="frame" x="66" y="18" width="79" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -173,12 +173,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6G-Fd-e0j">
-                                        <rect key="frame" x="133" y="5" width="189" height="34"/>
+                                        <rect key="frame" x="137" y="4" width="189" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" min">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.1333333333" green="0.17254901959999999" blue="0.26274509800000001" alpha="0.50381215413411462" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.67843137254901964" green="0.68235294117647061" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" size="17" name="SFPro-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -186,9 +186,10 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGh-dA-pRr">
-                                        <rect key="frame" x="330" y="0.0" width="28" height="44"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TGh-dA-pRr">
+                                        <rect key="frame" x="334" y="16" width="12" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.67843137254901964" green="0.68235294117647061" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Daily Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-D7-XWS">
                                         <rect key="frame" x="8" y="0.0" width="117" height="44"/>
@@ -292,8 +293,12 @@
     <resources>
         <image name="Stats-clock" width="35" height="35"/>
         <image name="Stats-flame" width="29" height="36"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
