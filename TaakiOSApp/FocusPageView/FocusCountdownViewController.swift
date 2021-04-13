@@ -11,9 +11,10 @@ class FocusCountdownViewController : UIViewController {
     let timePicker = UIDatePicker()
     
     var timer : Timer = Timer()
-    var count : Int = 0
-    var timerCounting : Bool = false
-    var taskName: String!
+    var count = 0
+    var timerCounting = false
+    var taskName = ""
+    //
     var duration: Int!
 
     override func viewDidLoad() {
@@ -50,7 +51,8 @@ class FocusCountdownViewController : UIViewController {
                 
                 let storyBoard : UIStoryboard = UIStoryboard(name: "FinishedFocus", bundle:nil)
                 let congratulationController = storyBoard.instantiateViewController(withIdentifier: "congratulation") as! FinishedFocusViewController
-                congratulationController.taskName = "\(String(describing: self.taskName)))"
+                congratulationController.taskName = self.taskName
+                //
                 congratulationController.duration = self.duration
                 congratulationController.modalPresentationStyle = .fullScreen
                 
@@ -77,7 +79,7 @@ class FocusCountdownViewController : UIViewController {
             alert.addAction(UIAlertAction(title: "Next", style: .default, handler: { (_) in
                 let storyBoard : UIStoryboard = UIStoryboard(name: "FinishedFocus", bundle:nil)
                 let congratulationController = storyBoard.instantiateViewController(withIdentifier: "congratulation") as! FinishedFocusViewController
-                congratulationController.taskName = "\(String(describing: self.taskName)))"
+                congratulationController.taskName = self.taskName
                 congratulationController.duration = self.duration
                 congratulationController.modalPresentationStyle = .fullScreen
                 

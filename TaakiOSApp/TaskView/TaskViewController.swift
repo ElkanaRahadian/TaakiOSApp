@@ -225,18 +225,19 @@ extension TaskViewController: UISearchBarDelegate {
         if statusSegment == "DONE" {
             
             let taskNameArr = TaskViewController.taskCollectionDone.map{ $0.taskName }
+            
+            let taskArray = TaskViewController.taskCollectionDone
             if searchText == "" {
 
                 filteredData = TaskViewController.taskCollectionDone
             } else {
 
                 searching = true
-                for taskName in taskNameArr {
+                for taskName in 0..<taskNameArr.count {
 
-                    if taskName.lowercased().contains(searchText.lowercased()) {
-
+                    if taskNameArr[taskName].lowercased().contains(searchText.lowercased()) {
 //                        searching = false
-                        filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
+                        filteredData.append(TaskModel(taskName: taskNameArr[taskName], estimateDuration: taskArray[taskName].estimateDuration, status: ""))
 //                        searching = false
                     }
                 }
