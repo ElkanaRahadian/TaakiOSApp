@@ -119,9 +119,10 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         // Component Delete action
         let delete = UIContextualAction(style: .destructive, title: "", handler: { (action, view, onComplete) in
             
+            print("Delete task: \(self.taskCollectionPending[indexPath.row].taskName)")
             self.taskCollectionPending.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            print("Delete task: \(self.taskCollectionPending[indexPath.row].taskName)")
+            
         })
         
         delete.image = UIImage.init(named: "trash")
@@ -143,20 +144,20 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         let pin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
 
             taskCollectionPending[indexPath.row].pin = true
+            print("Pin task: \(self.taskCollectionPending[indexPath.row].taskName)")
             let element = self.taskCollectionPending.remove(at: indexPath.row)
             self.taskCollectionPending.insert(element, at: 0)
             taskTableView.reloadData()
-            print("Pin task: \(self.taskCollectionPending[indexPath.row].taskName)")
         })
         
         // function unpin task
         let unpin = UIContextualAction(style: .normal, title: "", handler: { [self] (action, view, onComplete) in
 
             taskCollectionPending[indexPath.row].pin = false
+            print("Unpin task: \(self.taskCollectionPending[indexPath.row].taskName)")
             let element = self.taskCollectionPending.remove(at: indexPath.row)
             self.taskCollectionPending.insert(element, at: taskCollectionPending.endIndex)
             taskTableView.reloadData()
-            print("Unpin task: \(self.taskCollectionPending[indexPath.row].taskName)")
         })
         
         pin.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
