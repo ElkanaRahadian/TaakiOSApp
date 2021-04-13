@@ -93,7 +93,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
                     
                     let fullString = NSMutableAttributedString(string: "")
                     let image = NSTextAttachment()
-                    image.image = UIImage(named: "pin")
+                    image.image = UIImage(named: "pin-dark")
                     let imageString = NSAttributedString(attachment: image)
 
                     fullString.append(imageString)
@@ -189,7 +189,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             taskName = filteredData[indexPath.row].taskName
             duration = filteredData[indexPath.row].estimateDuration
             
-            print("Select task: \(taskName)")
+            print("Select task: \(filteredData[indexPath.row].taskName)")
             self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
         }
     }
