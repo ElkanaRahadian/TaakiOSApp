@@ -22,8 +22,8 @@ class TaskViewController: UIViewController {
     var searching = false
     var selectedIndex = 0
     var statusSegment: String = "PENDING"
-    var taskCollectionPending: [TaskModel] = [TaskModel(taskName: "Hi-Fi Prototype", estimateDuration: 120, status: "PENDING"), TaskModel(taskName: "Final Project", estimateDuration: 150, status: "PENDING")]
-    static var taskCollectionDone: [TaskModel] = [TaskModel(taskName: "Lo-Fi Prototype", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Self Learning", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Keynote Presentation", estimateDuration: 30, status: "DONE")]
+    var taskCollectionPending: [TaskModel] = [TaskModel(taskName: "Hi-Fi Prototype", estimateDuration: 120, status: "PENDING"), TaskModel(taskName: "Final Project", estimateDuration: 150, status: "PENDING"), TaskModel(taskName: "Self Learning", estimateDuration: 60, status: "DONE")]
+    static var taskCollectionDone: [TaskModel] = [TaskModel(taskName: "Lo-Fi Prototype", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Keynote Presentation", estimateDuration: 30, status: "DONE")]
     var taskName = ""
     static var instance = TaskViewController()
     
@@ -98,8 +98,9 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
                     let imageString = NSAttributedString(attachment: image)
 
                     fullString.append(imageString)
-                    fullString.append(NSAttributedString(string: " \(taskCollectionPending[indexPath.row].estimateDuration) min"))
+                    fullString.append(NSAttributedString(string: "    \(taskCollectionPending[indexPath.row].estimateDuration) min"))
                     taskCell.taskDurationLabel.attributedText = fullString
+                    taskCell.taskDurationLabel.textAlignment = .right
                 } else {
                     
                     taskCell.taskDurationLabel.text = "\(taskCollectionPending[indexPath.row].estimateDuration) min"
@@ -187,10 +188,10 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         if statusSegment == "PENDING" {
             
             selectedIndex = indexPath.row
-            taskName = filteredData[indexPath.row].taskName
-            duration = filteredData[indexPath.row].estimateDuration
+            taskName = taskCollectionPending[indexPath.row].taskName
+            duration = taskCollectionPending[indexPath.row].estimateDuration
             
-            print("Select task: \(filteredData[indexPath.row].taskName)")
+            print("Select task: \(taskCollectionPending[indexPath.row].taskName)")
             self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
         }
     }
@@ -236,27 +237,25 @@ extension TaskViewController: UISearchBarDelegate {
                 for taskName in 0..<taskNameArr.count {
 
                     if taskNameArr[taskName].lowercased().contains(searchText.lowercased()) {
-//                        searching = false
                         filteredData.append(TaskModel(taskName: taskNameArr[taskName], estimateDuration: taskArray[taskName].estimateDuration, status: ""))
-//                        searching = false
                     }
                 }
             }
         } else {
             
             let taskNameArr = taskCollectionPending.map{ $0.taskName }
+            
+            let taskArray = taskCollectionPending
             if searchText == "" {
 
                 filteredData = taskCollectionPending
             } else {
 
                 searching = true
-                for taskName in taskNameArr {
+                for taskName in 0..<taskNameArr.count {
 
-                    if taskName.lowercased().contains(searchText.lowercased()) {
-
-                        filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
-//                        searching = false
+                    if taskNameArr[taskName].lowercased().contains(searchText.lowercased()) {
+                        filteredData.append(TaskModel(taskName: taskNameArr[taskName], estimateDuration: taskArray[taskName].estimateDuration, status: ""))
                     }
                 }
             }
