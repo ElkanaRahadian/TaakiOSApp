@@ -23,8 +23,9 @@ class TaskViewController: UIViewController {
     var selectedIndex = 0
     var statusSegment: String = "PENDING"
     var taskCollectionPending: [TaskModel] = [TaskModel(taskName: "Hi-Fi Prototype", estimateDuration: 120, status: "PENDING"), TaskModel(taskName: "Final Project", estimateDuration: 150, status: "PENDING")]
-    var taskCollectionDone: [TaskModel] = [TaskModel(taskName: "Lo-Fi Prototype", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Self Learning", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Keynote Presentation", estimateDuration: 30, status: "DONE")]
+    static var taskCollectionDone: [TaskModel] = [TaskModel(taskName: "Lo-Fi Prototype", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Self Learning", estimateDuration: 60, status: "DONE"), TaskModel(taskName: "Keynote Presentation", estimateDuration: 30, status: "DONE")]
     var taskName = ""
+    static var instance = TaskViewController()
     
     override func viewDidLoad() {
         
@@ -56,7 +57,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
              if statusSegment == "DONE"{
                 
-                return taskCollectionDone.count
+                return TaskViewController.taskCollectionDone.count
              } else {
                 
                 return taskCollectionPending.count
@@ -85,8 +86,8 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             
             if statusSegment == "DONE"{
                 
-                taskCell.taskTitleLabel.text = taskCollectionDone[indexPath.row].taskName
-                taskCell.taskDurationLabel.text = "\(taskCollectionDone[indexPath.row].estimateDuration) min"
+                taskCell.taskTitleLabel.text = TaskViewController.taskCollectionDone[indexPath.row].taskName
+                taskCell.taskDurationLabel.text = "\(TaskViewController.taskCollectionDone[indexPath.row].estimateDuration) min"
             } else {
                 
                 if (taskCollectionPending[indexPath.row].pin) {
@@ -223,10 +224,10 @@ extension TaskViewController: UISearchBarDelegate {
         
         if statusSegment == "DONE" {
             
-            let taskNameArr = taskCollectionDone.map{ $0.taskName }
+            let taskNameArr = TaskViewController.taskCollectionDone.map{ $0.taskName }
             if searchText == "" {
 
-                filteredData = taskCollectionDone
+                filteredData = TaskViewController.taskCollectionDone
             } else {
 
                 searching = true
