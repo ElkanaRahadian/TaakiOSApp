@@ -11,6 +11,8 @@ class FocusAddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameField.delegate = self
+        taskNameField.autocorrectionType = UITextAutocorrectionType.no
+        
         createDurationPicker()
         estimateDurationView.layer.cornerRadius = 9.0
     }

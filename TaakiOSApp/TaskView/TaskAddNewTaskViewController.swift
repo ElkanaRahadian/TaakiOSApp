@@ -14,11 +14,11 @@ class TaskAddNewTaskViewController: UIViewController {
     @IBOutlet weak var durationTextField: UITextField!
     let timePicker = UIDatePicker()
     
-    var newTask = [TaskModel]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameField.delegate = self
+        taskNameField.autocorrectionType = UITextAutocorrectionType.no
+
         createDurationPicker()
         estimateDurationView.layer.cornerRadius = 9.0
     }
@@ -28,20 +28,15 @@ class TaskAddNewTaskViewController: UIViewController {
     }
     
     @IBAction func addTaskAddButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "taskViewSegue", sender: self)
-//        dismiss(animated: true, completion: nil)
-        addTask()
-    }
-    
-    func addTask() {
-        newTask.append(contentsOf: [TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60 , status: "PENDING")])
-        print("\(newTask)")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? TaskViewController {
-            destinationVC.taskCollectionPending.append(contentsOf: newTask)
-        }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "TaskView", bundle:nil)
+        let taskViewController = storyBoard.instantiateViewController(withIdentifier: "listTask") as! TaskViewController
+        taskViewController.statusSegment = "PENDING"
+        taskViewController.taskCollectionPending.append(TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60, status: "PENDING"))
+
+        taskViewController.modalPresentationStyle = .fullScreen
+        self.present(taskViewController, animated: true, completion: nil)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -8,6 +8,8 @@ class FocusCountdownViewController : UIViewController {
     @IBOutlet weak var startFinishButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    let timePicker = UIDatePicker()
+    
     var timer : Timer = Timer()
     var count : Int = 0
     var timerCounting : Bool = false
@@ -16,7 +18,6 @@ class FocusCountdownViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        startFinishButton.setTitleColor(UIColor.green, for: .normal)
         taskNameLabel.text = taskName
         count = duration*60
     }
@@ -45,9 +46,15 @@ class FocusCountdownViewController : UIViewController {
                 self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             }))
             alert.addAction(UIAlertAction(title: "Finish Focus", style: .default, handler: { (_) in
-//              self.count = 0
                 self.timer.invalidate()
-//              self.dismiss(animated: true, completion: nil)
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "FinishedFocus", bundle:nil)
+                let congratulationController = storyBoard.instantiateViewController(withIdentifier: "congratulation") as! FinishedFocusViewController
+                congratulationController.taskName = "\(String(describing: self.taskName)))"
+                congratulationController.duration = self.duration
+                congratulationController.modalPresentationStyle = .fullScreen
+                
+                self.present(congratulationController, animated:true, completion:nil)
             }))
                 self.present(alert, animated: true, completion: nil)
         } else {
@@ -62,6 +69,24 @@ class FocusCountdownViewController : UIViewController {
         let time = secondsToHoursMinutesSecond(seconds: count)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         countdownLabel.text = timeString
+        
+        if count == 0 {
+            timer.invalidate()
+            let alert = UIAlertController(title: "Time's up!", message: "You've finished your focus session", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Next", style: .default, handler: { (_) in
+                let storyBoard : UIStoryboard = UIStoryboard(name: "FinishedFocus", bundle:nil)
+                let congratulationController = storyBoard.instantiateViewController(withIdentifier: "congratulation") as! FinishedFocusViewController
+                congratulationController.taskName = "\(String(describing: self.taskName)))"
+                congratulationController.duration = self.duration
+                congratulationController.modalPresentationStyle = .fullScreen
+                
+                self.present(congratulationController, animated:true, completion:nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     }
 
     func secondsToHoursMinutesSecond(seconds : Int) -> (Int,Int, Int) {

@@ -222,8 +222,9 @@ extension TaskViewController: UISearchBarDelegate {
 
                     if taskName.lowercased().contains(searchText.lowercased()) {
 
+//                        searching = false
                         filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
-                        searching = false
+//                        searching = false
                     }
                 }
             }
@@ -241,7 +242,7 @@ extension TaskViewController: UISearchBarDelegate {
                     if taskName.lowercased().contains(searchText.lowercased()) {
 
                         filteredData.append(TaskModel(taskName: taskName, estimateDuration: 0, status: ""))
-                        searching = false
+//                        searching = false
                     }
                 }
             }
