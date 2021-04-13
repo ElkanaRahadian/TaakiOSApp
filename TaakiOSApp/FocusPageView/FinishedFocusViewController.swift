@@ -12,6 +12,7 @@ class FinishedFocusViewController: UIViewController {
     var taskName = ""
     var duration = 0
     var status = "DONE"
+//    let value = TaskViewController.taskCollectionDone.map(TaskModel)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class FinishedFocusViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? TaskViewController {
             destinationVC.statusSegment = "DONE"
-            destinationVC.taskCollectionDone.append(TaskModel(taskName: taskName, estimateDuration: duration, status: status))
+            TaskViewController.taskCollectionDone.append(TaskModel(taskName: taskName, estimateDuration: duration, status: status))
         }
     }
 

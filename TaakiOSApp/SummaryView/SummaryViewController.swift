@@ -40,11 +40,24 @@ class SummaryViewController: UIViewController {
 //        self.dailyGoalTable.reloadData()
         
         createTimePicker()
+        countTotalMin()
     }
     
     func countTotalMin() {
-//        let totalMin = taskCollectionDone.map{ $0.estimateDuration }
+        //manggil data dari viewController taskView
+        let callData = TaskViewController.taskCollectionDone.map{ $0.estimateDuration }
+//        print(callData)
         
+        var totalMin = 0
+        var counter = 0
+        
+        while counter < callData.count {
+            let value = callData[counter]
+            totalMin += value
+            counter += 1
+        }
+        
+        totalMinLabel.text = "\(totalMin)"
         
     }
     
