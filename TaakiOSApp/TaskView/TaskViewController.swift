@@ -80,6 +80,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
 
             taskCell.taskTitleLabel.text = filteredData[indexPath.row].taskName
             taskCell.taskDurationLabel.text = "\(filteredData[indexPath.row].estimateDuration) min"
+            searching = false
         } else {
             
             if statusSegment == "DONE"{
@@ -185,8 +186,8 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         if statusSegment == "PENDING" {
             
             selectedIndex = indexPath.row
-            taskName = taskCollectionPending[indexPath.row].taskName
-            duration = taskCollectionPending[indexPath.row].estimateDuration
+            taskName = filteredData[indexPath.row].taskName
+            duration = filteredData[indexPath.row].estimateDuration
             
             print("Select task: \(taskName)")
             self.performSegue(withIdentifier: "focusCountdownSegue", sender: self)
