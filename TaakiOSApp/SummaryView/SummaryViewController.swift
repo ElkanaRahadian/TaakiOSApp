@@ -58,6 +58,7 @@ class SummaryViewController: UIViewController {
         }
         
         totalMinLabel.text = "\(totalMin)"
+//        print(totalMin)
         
     }
     
@@ -79,34 +80,21 @@ class SummaryViewController: UIViewController {
     }
     
     @objc func donePressed() {
-        self.dailyGoalsDetail.text = "\(Int(timePicker.countDownDuration)/60) min"
+        self.dailyGoalsDetail.text = "\(Int(timePicker.countDownDuration/60)) min"
         self.view.endEditing(true)
     }
     
-//    extension UIView {
-//        @IBInspectable var cornerRadius: CGFloat {
-//            get {
-//                return layer.cornerRadius
-//            } set {
-//                layer.cornerRadius = 5
-//                layer.masksToBounds = true
-//            }
-//        }
-//        totalMinView.layer.cornerRadius = 5
-//        totalMinView.layer.masksToBounds = true
-//        dailyStreakView.layer.cornerRadius = 5
-//        dailyStreakView.layer.masksToBounds = true
+//    static var valueDailyGoal: Int = nil
+//
+//    @objc func donePressed() {
+//        SummaryViewController.valueDailyGoal = Int(timePicker.countDownDuration/60)
+//        self.dailyGoalsDetail.text = "\(SummaryViewController.valueDailyGoal) min"
+//        self.view.endEditing(true)
 //    }
     
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        switch (indexPath.row) {
-//        case 0:
-//            self.array
-//        case 1:
-//            self.
-//        default:
-//            break
-//        }
+//    func passValue() {
+//        let passVar = storyboard?.instantiateViewController(identifier: "FocusPageViewController") as? FocusPageViewController
+//        passVar?.dailyGoalDetailLabel.text = "\(Int(dailyGoalsDetail))"
 //    }
 
     //untuk masukin 2 table view di satu view controller
@@ -142,20 +130,6 @@ class badgesTableView : NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 113
     }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return badgesCellSpacingHeight
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return badgesCellSpacingHeight
-//    }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView()
-//        headerView.backgroundColor = UIColor.clear
-//        return headerView
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let badgesCell = tableView.dequeueReusableCell(withIdentifier: "badgesCellIdentifier", for: indexPath) as? BadgesTableViewCell
