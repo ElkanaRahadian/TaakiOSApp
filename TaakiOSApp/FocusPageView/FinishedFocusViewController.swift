@@ -12,6 +12,7 @@ class FinishedFocusViewController: UIViewController {
     var taskName = ""
     var duration = 0
     var status = "DONE"
+//    let value = TaskViewController.taskCollectionDone.map(TaskModel)
     
     override func viewDidLoad() {
         super.viewDidLoad()
