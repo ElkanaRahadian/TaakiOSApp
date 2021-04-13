@@ -200,13 +200,13 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if let addVC = segue.destination as? TaskAddNewTaskViewController {
             addVC.taskCollectionPending = self.taskCollectionPending
-            addVC.delegate = self
+            addVC.delegate = self // subscribe TaskAddNewTaskViewController delegate, so by subscribing his delegate, we can sync the data changes from there within this TaskViewController.
         }
     }
     
 }
 
-extension TaskViewController: TaskAddNewTaskViewControllerDelegate {
+extension TaskViewController: TaskAddNewTaskViewControllerDelegate { // Once we subscribe the delegate, we need to conform the protocol to sync the the data through the function provided
     func updatePendingTask(newData: [TaskModel]) {
         self.taskCollectionPending = newData
         taskTableView.reloadData()

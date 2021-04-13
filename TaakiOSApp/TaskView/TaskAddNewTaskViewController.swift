@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol TaskAddNewTaskViewControllerDelegate: class {
+protocol TaskAddNewTaskViewControllerDelegate: class { // this blueprint needed as our bridge between this view controller to other view controller who subscribed it
     func updatePendingTask(newData: [TaskModel])
 }
 
@@ -20,7 +20,7 @@ class TaskAddNewTaskViewController: UIViewController {
     
     var taskCollectionPending: [TaskModel]?
     
-    weak var delegate: TaskAddNewTaskViewControllerDelegate?
+    weak var delegate: TaskAddNewTaskViewControllerDelegate? // we need to create an instance for it's delegate so this delegate can be used by other view controller
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ class TaskAddNewTaskViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             taskCollectionPending!.append(TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60, status: "PENDING"))
-            self.delegate?.updatePendingTask(newData: taskCollectionPending!)
+            self.delegate?.updatePendingTask(newData: taskCollectionPending!) // this will triger the delegate function and pass the data, so other view controller who subscribe the delegate from this view controller will have an update too
             self.dismiss(animated: true, completion: nil)
         }
         
