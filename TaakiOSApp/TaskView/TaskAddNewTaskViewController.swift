@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol TaskAddNewTaskViewControllerDelegate: class {
+    func updatePendingTask(newData: [TaskModel])
+}
+
 class TaskAddNewTaskViewController: UIViewController {
 
     @IBOutlet weak var taskNameField: UITextField!
     @IBOutlet weak var estimateDurationView: UIView!
     @IBOutlet weak var durationTextField: UITextField!
     let timePicker = UIDatePicker()
+    
+    var taskCollectionPending: [TaskModel]?
+    
+    weak var delegate: TaskAddNewTaskViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +36,25 @@ class TaskAddNewTaskViewController: UIViewController {
     }
     
     @IBAction func addTaskAddButton(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "TaskView", bundle:nil)
-        let taskViewController = storyBoard.instantiateViewController(withIdentifier: "listTask") as! TaskViewController
-        taskViewController.statusSegment = "PENDING"
-        taskViewController.taskCollectionPending.append(TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60, status: "PENDING"))
-
-        taskViewController.modalPresentationStyle = .fullScreen
-        self.present(taskViewController, animated: true, completion: nil)
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "TaskView", bundle:nil)
+//        let taskViewController = storyBoard.instantiateViewController(withIdentifier: "listTask") as! TaskViewController
+//        taskViewController.statusSegment = "PENDING"
+//        taskViewController.taskCollectionPending.append(TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60, status: "PENDING"))
+//
+//        taskViewController.modalPresentationStyle = .fullScreen
+//        self.present(taskViewController, animated: true, completion: nil)
         
-        dismiss(animated: true, completion: nil)
+        if taskNameField.text! == "" || Int(timePicker.countDownDuration) == 0 {
+            let alert = UIAlertController(title: "Warning", message: "Please complete all the necessary fields", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            taskCollectionPending!.append(TaskModel(taskName: taskNameField.text!, estimateDuration: Int(timePicker.countDownDuration)/60, status: "PENDING"))
+            self.delegate?.updatePendingTask(newData: taskCollectionPending!)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

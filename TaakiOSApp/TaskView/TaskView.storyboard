@@ -89,7 +89,7 @@
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="moD-Ec-u8y" kind="presentation" id="LlE-wl-PtK"/>
+                                    <segue destination="moD-Ec-u8y" kind="presentation" identifier="toAddNewTask" id="LlE-wl-PtK"/>
                                 </connections>
                             </button>
                         </subviews>

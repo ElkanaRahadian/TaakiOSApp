@@ -198,8 +198,19 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
             destinationVC.taskName = "\(taskName)"
             destinationVC.duration = duration
         }
+        if let addVC = segue.destination as? TaskAddNewTaskViewController {
+            addVC.taskCollectionPending = self.taskCollectionPending
+            addVC.delegate = self
+        }
     }
     
+}
+
+extension TaskViewController: TaskAddNewTaskViewControllerDelegate {
+    func updatePendingTask(newData: [TaskModel]) {
+        self.taskCollectionPending = newData
+        taskTableView.reloadData()
+    }
 }
 
 extension TaskViewController: UISearchBarDelegate {
