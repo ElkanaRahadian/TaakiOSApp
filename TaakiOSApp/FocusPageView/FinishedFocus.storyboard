@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Finished Focus View Controller-->
         <scene sceneID="TsZ-Gn-hg7">
             <objects>
-                <viewController id="cxo-2k-Ihm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="congratulation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cxo-2k-Ihm" customClass="FinishedFocusViewController" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dG0-3Q-yGV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                 <state key="normal" title="See finished tasks" backgroundImage="FocusViewCongrats-Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ldN-Er-AUe" kind="presentation" identifier="showListDone" modalPresentationStyle="fullScreen" id="VKN-hI-RsF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Excellent Job!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-Hg-YOk">
                                 <rect key="frame" x="96" y="467" width="223" height="41"/>
@@ -49,6 +52,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wt-Ke-R5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="321.73913043478262" y="101.78571428571428"/>
+        </scene>
+        <!--TaskView-->
+        <scene sceneID="pHN-Fo-jaL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TaskView" id="ldN-Er-AUe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2X-cl-o43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="149"/>
         </scene>
     </scenes>
     <resources>

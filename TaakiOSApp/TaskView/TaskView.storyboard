@@ -12,7 +12,7 @@
         <!--Task View Controller-->
         <scene sceneID="mYj-iY-feG">
             <objects>
-                <viewController id="bFU-WV-VGJ" customClass="TaskViewController" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listTask" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bFU-WV-VGJ" customClass="TaskViewController" customModule="TaakiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5Y-LX-XQe">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,6 @@
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="7fz-dd-HJP">
                                             <connections>
                                                 <action selector="addTaskAddButton:" destination="moD-Ec-u8y" id="Ba7-3V-XLk"/>
-                                                <segue destination="bFU-WV-VGJ" kind="presentation" identifier="taskViewSegue" modalPresentationStyle="fullScreen" id="8Ed-ZN-5YB"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
