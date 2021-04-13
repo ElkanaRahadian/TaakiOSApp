@@ -58,6 +58,7 @@ class SummaryViewController: UIViewController {
         }
         
         totalMinLabel.text = "\(totalMin)"
+//        print(totalMin)
         
     }
     
