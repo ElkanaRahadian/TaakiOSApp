@@ -27,7 +27,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ldN-Er-AUe" kind="presentation" identifier="showListDone" modalPresentationStyle="fullScreen" id="VKN-hI-RsF"/>
+                                    <action selector="dismissToRoot:" destination="cxo-2k-Ihm" eventType="touchUpInside" id="99M-g3-RHm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-Hg-YOk">

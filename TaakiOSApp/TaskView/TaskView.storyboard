@@ -98,6 +98,7 @@
                         <color key="backgroundColor" red="0.92156862745098034" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="RJz-us-23X" id="HDg-EW-Qty"/>
                         <outlet property="taskSearchBar" destination="FhF-pS-Znj" id="Qxg-WJ-m37"/>
                         <outlet property="taskTableView" destination="zp0-HW-m2T" id="Ha8-nx-bgb"/>
                         <segue destination="pHN-LI-egD" kind="presentation" identifier="focusCountdownSegue" modalPresentationStyle="fullScreen" id="Vbp-BE-fWR"/>
