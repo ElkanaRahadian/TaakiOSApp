@@ -17,7 +17,7 @@ class FinishedFocusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.performSegue(withIdentifier: "showListDone", sender: self)
+//        self.performSegue(withIdentifier: "showListDone", sender: self)
         // Do any additional setup after loading the view.
     }
     
@@ -26,6 +26,10 @@ class FinishedFocusViewController: UIViewController {
             destinationVC.statusSegment = "DONE"
             TaskViewController.taskCollectionDone.append(TaskModel(taskName: taskName, estimateDuration: duration, status: status))
         }
+    }
+    
+    @IBAction func unwind(_ seg: UIStoryboardSegue) {
+        
     }
 
 }
