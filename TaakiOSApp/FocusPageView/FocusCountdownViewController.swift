@@ -1,7 +1,12 @@
 import Foundation
 import UIKit
 
-class FocusCountdownViewController : UIViewController {
+protocol FocusCountdownViewControllerDelegate: class {
+    func udpateViewBackAgain()
+}
+
+class FocusCountdownViewController : UIViewController, FinishedFocusViewControllerDelegate {
+   
 
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var countdownLabel: UILabel!
@@ -16,6 +21,8 @@ class FocusCountdownViewController : UIViewController {
     var taskName = ""
     //
     var duration: Int!
+    
+    weak var delegate: FocusCountdownViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +59,7 @@ class FocusCountdownViewController : UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "FinishedFocus", bundle:nil)
                 let congratulationController = storyBoard.instantiateViewController(withIdentifier: "congratulation") as! FinishedFocusViewController
                 congratulationController.taskName = self.taskName
-                //
+                congratulationController.delegate = self
                 congratulationController.duration = self.duration
                 congratulationController.modalPresentationStyle = .fullScreen
                 
@@ -123,6 +130,11 @@ class FocusCountdownViewController : UIViewController {
         for name in names {
             NotificationCenter.default.addObserver(self, selector: selector, name: name, object: nil)
         }
+    }
+    
+    func updateViewBack() {
+        print("updateViewBack called")
+        self.delegate?.udpateViewBackAgain()
     }
     
     // MARK: -

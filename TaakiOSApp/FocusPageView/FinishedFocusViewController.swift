@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FinishedFocusViewControllerDelegate: class  {
+    func updateViewBack()
+}
+
 class FinishedFocusViewController: UIViewController {
 
     var taskName = ""
@@ -14,10 +18,12 @@ class FinishedFocusViewController: UIViewController {
     var status = "DONE"
 //    let value = TaskViewController.taskCollectionDone.map(TaskModel)
     
+    weak var delegate: FinishedFocusViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.performSegue(withIdentifier: "showListDone", sender: self)
+//        self.performSegue(withIdentifier: "showListDone", sender: self)
         // Do any additional setup after loading the view.
     }
     
@@ -28,4 +34,8 @@ class FinishedFocusViewController: UIViewController {
         }
     }
 
+    @IBAction func dismissToRoot(_ sender: UIButton) {
+        self.delegate?.updateViewBack()
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
 }

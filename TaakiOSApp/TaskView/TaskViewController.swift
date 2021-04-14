@@ -6,6 +6,8 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var taskSearchBar: UISearchBar!
     @IBOutlet weak var taskTableView: UITableView!
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     @IBAction func statusSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
@@ -31,6 +33,7 @@ class TaskViewController: UIViewController {
         
         super.viewDidLoad()
         configuration()
+//        segmentedControl.selectedSegmentIndex = 1
     }
     
     func configuration() {
