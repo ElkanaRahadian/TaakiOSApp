@@ -17,8 +17,8 @@ class FinishedFocusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.performSegue(withIdentifier: "showListDone", sender: self)
-        // Do any additional setup after loading the view.
+//        self.performSegue(withIdentifier: "showListDone", sender: self)
+//        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
