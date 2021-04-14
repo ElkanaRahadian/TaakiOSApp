@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol FinishedFocusViewControllerDelegate: class  {
+    func updateViewBack()
+}
+
 class FinishedFocusViewController: UIViewController {
 
     var taskName = ""
     var duration = 0
     var status = "DONE"
 //    let value = TaskViewController.taskCollectionDone.map(TaskModel)
+    
+    weak var delegate: FinishedFocusViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +38,8 @@ class FinishedFocusViewController: UIViewController {
         
     }
 
+    @IBAction func dismissToRoot(_ sender: UIButton) {
+        self.delegate?.updateViewBack()
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
 }

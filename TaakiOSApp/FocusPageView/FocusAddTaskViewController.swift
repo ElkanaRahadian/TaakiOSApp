@@ -1,12 +1,19 @@
 import Foundation
 import UIKit
 
-class FocusAddTaskViewController: UIViewController {
+protocol FocusAddTaskViewControllerDelegate: class {
+    func updateAgainForLastTime()
+}
+
+class FocusAddTaskViewController: UIViewController, FocusCountdownViewControllerDelegate {
+    
     
     @IBOutlet weak var taskNameField: UITextField!
     @IBOutlet weak var estimateDurationView: UIView!
     @IBOutlet weak var durationTextField: UITextField!
     let timePicker = UIDatePicker()
+    
+    weak var delegate: FocusAddTaskViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +59,13 @@ class FocusAddTaskViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? FocusCountdownViewController {
             destinationVC.taskName = "\(taskNameField.text ?? "")"
+            destinationVC.delegate = self
             destinationVC.duration = Int(timePicker.countDownDuration)/60
         }
+    }
+    
+    func udpateViewBackAgain() {
+        self.delegate?.updateAgainForLastTime()
     }
     
 }

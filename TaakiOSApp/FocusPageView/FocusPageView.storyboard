@@ -28,7 +28,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hlb-mT-MvC" kind="presentation" id="dSP-5N-zey"/>
+                                    <action selector="toAddAction:" destination="Bxt-a0-AGz" eventType="touchUpInside" id="elH-Hc-Obh"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FocusView-DailyGoalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-oA-L4g">
@@ -60,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="dailyGoalDetailLabel" destination="W61-FT-Te5" id="CBk-aS-iCp"/>
+                        <segue destination="hlb-mT-MvC" kind="presentation" identifier="toAddTask" id="8KD-pd-lDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqf-Pr-9CV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
