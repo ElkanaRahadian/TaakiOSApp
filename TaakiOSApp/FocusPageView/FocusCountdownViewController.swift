@@ -16,7 +16,7 @@ class FocusCountdownViewController : UIViewController {
     var taskName = ""
     //
     var duration: Int!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameLabel.text = taskName
@@ -61,6 +61,8 @@ class FocusCountdownViewController : UIViewController {
                 self.present(alert, animated: true, completion: nil)
         } else {
             
+            guidedAccess()
+            
             startFinishButton.setTitle("Finish", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
@@ -73,6 +75,8 @@ class FocusCountdownViewController : UIViewController {
         countdownLabel.text = timeString
         
         if count == 0 {
+            guidedAccess()
+            
             timer.invalidate()
             let alert = UIAlertController(title: "Time's up!", message: "You've finished your focus session", preferredStyle: .alert)
 
@@ -90,6 +94,60 @@ class FocusCountdownViewController : UIViewController {
             
         }
     }
+    
+    func guidedAccess() {
+        if !UIAccessibility.isGuidedAccessEnabled {
+            
+            UIAccessibility.requestGuidedAccessSession(enabled: true) {
+            success in
+            print("Request guided access success \(success)")
+            }
+            
+                
+        } else {
+            UIAccessibility.requestGuidedAccessSession(enabled: false) {
+            success in
+            print("Request guided access success \(success)")
+            }
+        }
+        
+        self.updateViewForGuidedAccess()
+        let selector = #selector(updateViewForGuidedAccess)
+    
+        let names: [Notification.Name] = [
+    //  UIAccessibility.guidedAccessStatusDidChangeNotification,
+        UIAccessibility.guidedAccessDidAllowRestrictionNotification,
+        UIAccessibility.guidedAccessDidDenyRestrictionNotification
+        ]
+    
+        for name in names {
+            NotificationCenter.default.addObserver(self, selector: selector, name: name, object: nil)
+        }
+    }
+    
+    // MARK: -
+
+    @objc private func updateViewForGuidedAccess() {
+        guard UIAccessibility.isGuidedAccessEnabled else { return }
+
+        switch UIAccessibility.guidedAccessRestrictionState(forIdentifier: Restriction.focus.rawValue) {
+        case .allow:
+//        registerObeserver()
+            startFinishButton.isEnabled = false
+            startFinishButton.isHidden = true
+
+            startFinishButton.isEnabled = false
+            startFinishButton.isHidden = true
+        case .deny:
+            startFinishButton.isEnabled = true
+            startFinishButton.isHidden = false
+
+            cancelButton.isEnabled = true
+            cancelButton.isHidden = false
+        @unknown default:
+            break
+        }
+    }
 
     func secondsToHoursMinutesSecond(seconds : Int) -> (Int,Int, Int) {
         return (seconds / 3600, ((seconds % 3600) / 60), ((seconds % 3600) % 60))
@@ -105,3 +163,55 @@ class FocusCountdownViewController : UIViewController {
         return timeString
     }
 }
+
+enum Restriction: String, CaseIterable {
+    case focus = "Focus"
+}
+
+extension Restriction {
+    var text: String {
+        switch self {
+        case .focus:
+            return NSLocalizedString("Focus", comment: "Focus")
+        }
+    }
+}
+
+// MARK: - UIGuidedAccessRestrictionDelegate
+
+extension FocusCountdownViewController: UIGuidedAccessRestrictionDelegate {
+    var guidedAccessRestrictionIdentifiers: [String]? {
+        return Restriction.allCases.map { $0.rawValue }
+    }
+
+    func textForGuidedAccessRestriction(withIdentifier restrictionIdentifier: String) -> String? {
+        return Restriction(rawValue: restrictionIdentifier)?.text
+    }
+
+    func guidedAccessRestriction(withIdentifier restrictionIdentifier: String, didChange newRestrictionState: UIAccessibility.GuidedAccessRestrictionState) {
+            let notification: Notification
+
+            switch newRestrictionState {
+            case .allow:
+                notification = Notification(name: UIAccessibility.guidedAccessDidAllowRestrictionNotification, object: restrictionIdentifier)
+            case .deny:
+                notification = Notification(name: UIAccessibility.guidedAccessDidDenyRestrictionNotification, object: restrictionIdentifier)
+            @unknown default:
+                // Switch covers known cases,
+                // but 'UIAccessibility.GuidedAccessRestrictionState'
+                // may have additional unknown values,
+                // possibly added in future versions
+                return
+            }
+
+            NotificationCenter.default.post(notification)
+        }
+}
+
+extension UIAccessibility {
+    static let guidedAccessDidAllowRestrictionNotification = NSNotification.Name("allow-restriction")
+
+    static let guidedAccessDidDenyRestrictionNotification = NSNotification.Name("deny-restriction")
+}
+
+

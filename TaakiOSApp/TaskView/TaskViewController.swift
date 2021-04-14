@@ -98,7 +98,7 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
                     let imageString = NSAttributedString(attachment: image)
 
                     fullString.append(imageString)
-                    fullString.append(NSAttributedString(string: "    \(taskCollectionPending[indexPath.row].estimateDuration) min"))
+                    fullString.append(NSAttributedString(string: "   \(taskCollectionPending[indexPath.row].estimateDuration) min"))
                     taskCell.taskDurationLabel.attributedText = fullString
                     taskCell.taskDurationLabel.textAlignment = .right
                 } else {
