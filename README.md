@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="500" src="/TaakiOSApp.png">
+  <img height="500" src="/TaakiOS.png">
 </p>
 
 # TaakiOSApp
