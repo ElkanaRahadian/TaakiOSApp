@@ -2,7 +2,7 @@
   <img src="/TaakiOS(2).jpeg">
 </p>
 
-# Taak iOS App
+# Taak iOS Ap
 An iOS app intended for undergraduates to focus and visualize tasks that needed to be done
 
 # Engineering
